@@ -1,464 +1,192 @@
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-AO">
 
-    <head>
-        <meta charset="utf-8">
-        <title>ArkPray - Soluções seguras</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+<head>
+    <meta charset="utf-8">
+    <title>ArkPray - Cibersegurança e Desenvolvimento de Software em Angola</title>
+    <meta name="description" content="ArkPray: Especialistas em cibersegurança, desenvolvimento de software, aplicativos móveis e consultoria tecnológica em Angola. Soluções seguras para empresas.">
+    <meta name="keywords" content="cibersegurança angola, desenvolvimento software luanda, aplicativos móveis, consultoria TI, pentest, CIRT, cyber segurança, empresa TI angola, segurança digital">
+    <meta name="author" content="ArkPray Angola">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ArkPray - Cibersegurança e Desenvolvimento de Software em Angola">
+    <meta property="og:description" content="Especialistas em cibersegurança, desenvolvimento de software e consultoria tecnológica em Angola. Proteção digital avançada para empresas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arkpray.vercel.app">
+    <meta property="og:image" content="https://arkpray.vercel.app/img/logo-og.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://arkpray.vercel.app">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ArkPray",
+        "url": "https://arkpray.vercel.app",
+        "logo": "https://arkpray.vercel.app/img/logo.png",
+        "description": "Especialistas em cibersegurança, desenvolvimento de software e consultoria tecnológica em Angola",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Luanda",
+            "addressCountry": "AO"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+244-932-088-879",
+            "contactType": "customer service",
+            "email": "arkpraycps@gmail.com"
+        },
+        "sameAs": [
+            "https://www.facebook.com/arkprayangola",
+            "https://www.linkedin.com/company/arkprayangola"
+        ]
+    }
+    </script>
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
-        <link rel="stylesheet" href="lib/animate/animate.min.css"/>
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="lib/animate/animate.min.css"/>
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+<body>
 
-    <body>
-
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
         </div>
-        <!-- Spinner End -->
+    </div>
+    <!-- Spinner End -->
 
-        <!-- Topbar Start -->
-        <div class="container-fluid topbar bg-light px-5 d-none d-lg-block">
-            <div class="row gx-0 align-items-center">
-                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                    <div class="d-flex flex-wrap">
-                        <a href="#" class="text-muted small me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Luanda – Angola</a>
-                        <a href="tel:+01234567890" class="text-muted small me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+244932088879</a>
-                        <a href="mailto:arkpraycps@gmail.com" class="text-muted small me-0"><i class="fas fa-envelope text-primary me-2"></i>arkpraycps@gmail.com</a>
-                    </div>
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar bg-light px-5 d-none d-lg-block">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-flex flex-wrap">
+                    <span class="text-muted small me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Luanda – Angola</span>
+                    <a href="tel:+244932088879" class="text-muted small me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+244 932 088 879</a>
+                    <a href="mailto:arkpraycps@gmail.com" class="text-muted small me-0"><i class="fas fa-envelope text-primary me-2"></i>arkpraycps@gmail.com</a>
                 </div>
-               <div class="col-lg-4 text-center text-lg-end">
-                    <div class="d-inline-flex align-items-center" style="height: 45px;">
-                       <a href="#"><small class="me-3 text-dark"><i class="fa fa-user text-primary me-2"></i>Register</small></a>
-                        <a href="#"><small class="me-3 text-dark"><i class="fa fa-sign-in-alt text-primary me-2"></i>Login</small></a>
-                        <div class="dropdown">
-                            <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i class="fa fa-home text-primary me-2"></i> My Dashboard</small></a>
-                            <div class="dropdown-menu rounded">
-                                <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> My Profile</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-comment-alt me-2"></i> Inbox</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-bell me-2"></i> Notifications</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Account Settings</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Log Out</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
             </div>
-        </div>
-        <!-- Topbar End -->
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary"></i>ArkSoft</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">Sobre</a>
-                        <a href="#services" class="nav-item nav-link">Serviços</a>
-                        <a href="#features" class="nav-item nav-link">Recursos</a>
-                        <a href="#offer" class="nav-item nav-link">Ofertas</a>
-                        <a href="#blog" class="nav-item nav-link">Blog</a>
-                    </div>
-                    <a href="#" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Consultoria</a>
-               
-                     </div>
-            </nav>
-
-            <!-- Hero Section with ID for navigation -->
-            <div id="home" class="header-carousel owl-carousel">
-                <div class="header-carousel-item">
-                    <img src="img/carousel-1.jpg" class="img-fluid w-100" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row gy-0 gx-5">
-                                <div class="col-lg-0 col-xl-5"></div>
-                                <div class="col-xl-7 animated fadeInLeft">
-                                    <div class="text-sm-center text-md-end">
-                                        <h4 class="text-primary text-uppercase fw-bold mb-4">Bem-Vindo a ArkSoft</h4>
-                                        <h1 class="display-4 text-uppercase text-white mb-4">Soluções seguras, rápidas e escaláveis</h1>
-                                        <p class="mb-5 fs-5">Somos especialistas em Cibersegurança, Desenvolvimento de Software e Consultoria Tecnológica
-                                        </p>
-                                        <div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
-                                            <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#"><i class="fas fa-play-circle me-2"></i>Ver Video</a>
-                                            <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="#about">Saiba Mais</a>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-center justify-content-md-end">
-                                            <h2 class="text-white me-2">Nos Segue:</h2>
-                                            <div class="d-flex justify-content-end ms-2">
-                                                <a class="btn btn-md-square btn-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                                <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i class="fab fa-twitter"></i></a>
-                                                <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i class="fab fa-instagram"></i></a>
-                                                <a class="btn btn-md-square btn-light rounded-circle ms-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+           <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                   <a href="#"><small class="me-3 text-dark"><i class="fa fa-user text-primary me-2"></i>Registrar</small></a>
+                    <a href="#"><small class="me-3 text-dark"><i class="fa fa-sign-in-alt text-primary me-2"></i>Login</small></a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i class="fa fa-home text-primary me-2"></i> Meu Painel</small></a>
+                        <div class="dropdown-menu rounded">
+                            <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> Meu Perfil</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-comment-alt me-2"></i> Caixa de Entrada</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-bell me-2"></i> Notificações</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Configurações</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Sair</a>
                         </div>
                     </div>
                 </div>
-                <div class="header-carousel-item">
-                    <img src="img/carousel-2.jpg" class="img-fluid w-100" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row g-5">
-                                <div class="col-12 animated fadeInUp">
-                                    <div class="text-center">
-                                        <h4 class="text-primary text-uppercase fw-bold mb-4">Bem-Vindo a ArkSoft</h4>
-                                        <h1 class="display-4 text-uppercase text-white mb-4">Soluções seguras, rápidas e escaláveis</h1>
-                                        <p class="mb-5 fs-5">Somos especialistas em Cibersegurança, Desenvolvimento de Software e Consultoria Tecnológica 
-                                        </p>
-                                        <div class="d-flex justify-content-center flex-shrink-0 mb-4">
-                                            <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#"><i class="fas fa-play-circle me-2"></i> Ver Video</a>
-                                            <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="#about">Saiba Mais</a>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <h2 class="text-white me-2">Nos Segue:</h2>
-                                            <div class="d-flex justify-content-end ms-2">
-                                                <a class="btn btn-md-square btn-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                                <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i class="fab fa-twitter"></i></a>
-                                                <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i class="fab fa-instagram"></i></a>
-                                                <a class="btn btn-md-square btn-light rounded-circle ms-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Carousel End -->
+            </div> 
         </div>
-        <!-- Navbar & Hero End -->
+    </div>
+    <!-- Topbar End -->
 
-        <!-- About Section with ID -->
-        <div id="about" class="container-fluid about py-5">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-xl-7 wow fadeInLeft" data-wow-delay="0.2s">
-                        <div>
-                            <h4 class="text-primary">Sobre Nós</h4>
-                            <h1 class="display-5 mb-4">Somos especialistas em Cibersegurança, Desenvolvimento de Software e Consultoria Tecnológica</h1>
-                            <p class="mb-4">A Arksoft é uma empresa angolana especializada em CIRT (Computer Incident Response Team), segurança cibernética, desenvolvimento de software profissional, aplicativos móveis e soluções empresariais de gestão e faturação.
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="https://arkpray.vercel.app" class="navbar-brand p-0">
+                <h1 class="text-primary"><i class="fas fa-shield-alt me-2"></i>ArkPray</h1>
+                <!-- <img src="img/logo.png" alt="ArkPray - Cibersegurança Angola" width="120" height="40"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="#home" class="nav-item nav-link active">Home</a>
+                    <a href="#about" class="nav-item nav-link">Sobre</a>
+                    <a href="#services" class="nav-item nav-link">Serviços</a>
+                    <a href="#features" class="nav-item nav-link">Recursos</a>
+                    <a href="#offer" class="nav-item nav-link">Ofertas</a>
+                    <a href="#blog" class="nav-item nav-link">Blog</a>
+                </div>
+                <a href="#contact" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Consultoria</a>
+            </div>
+        </nav>
 
-Atuamos com foco em garantir segurança digital, eficiência operacional e tecnologia de alta performance para empresas de todos os portes.
-
-Com uma equipe experiente, certificada e apaixonada por inovação, ajudamos organizações a proteger seus sistemas, automatizar processos, reduzir riscos e melhorar resultados através da tecnologia.
-                            </p>
-                            <div class="row g-4">
-                                <div class="col-md-6 col-lg-6 col-xl-6">
-                                    <div class="d-flex">
-                                        <div><i class="fas fa-lightbulb fa-3x text-primary"></i></div>
-                                        <div class="ms-4">
-                                            <h4>Consultoria Empresarial</h4>
-                                            <p>Transformamos tecnologia em resultados.</p>
-                                        </div>
+        <!-- Hero Section with ID for navigation -->
+        <div id="home" class="header-carousel owl-carousel">
+            <div class="header-carousel-item">
+                <img src="img/carousel-1.jpg" class="img-fluid w-100" alt="Cibersegurança e Proteção Digital em Angola" width="1920" height="1080">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row gy-0 gx-5">
+                            <div class="col-lg-0 col-xl-5"></div>
+                            <div class="col-xl-7 animated fadeInLeft">
+                                <div class="text-sm-center text-md-end">
+                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Bem-Vindo a ArkPray</h4>
+                                    <h1 class="display-4 text-uppercase text-white mb-4">Soluções seguras, rápidas e escaláveis</h1>
+                                    <p class="mb-5 fs-5">Somos especialistas em Cibersegurança, Desenvolvimento de Software e Consultoria Tecnológica em Angola</p>
+                                    <div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
+                                        <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#"><i class="fas fa-play-circle me-2"></i>Ver Video</a>
+                                        <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="#about">Saiba Mais</a>
                                     </div>
-                                </div>
-                                <div class="col-md-6 col-lg-6 col-xl-6">
-                                    <div class="d-flex">
-                                        <div><i class="bi bi-bookmark-heart-fill fa-3x text-primary"></i></div>
-                                        <div class="ms-4">
-                                            <h4>Anos de Experiência</h4>
-                                            <p>Mais de 5 anos de experiência em TI, cibersegurança, redes e desenvolvimento de software.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <a href="#" class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0">Descubra Agora</a>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="d-flex">
-                                        <i class="fas fa-phone-alt fa-2x text-primary me-4"></i>
-                                        <div>
-                                            <h4>Contacta-nos</h4>
-                                            <p class="mb-0 fs-5" style="letter-spacing: 1px;">+244932088879</p>
+                                    <div class="d-flex align-items-center justify-content-center justify-content-md-end">
+                                        <h2 class="text-white me-2">Nos Segue:</h2>
+                                        <div class="d-flex justify-content-end ms-2">
+                                            <a class="btn btn-md-square btn-light rounded-circle me-2" href="https://facebook.com/arkprayangola" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://twitter.com/arkprayangola" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://instagram.com/arkprayangola" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle ms-2" href="https://linkedin.com/company/arkprayangola" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-5 wow fadeInRight" data-wow-delay="0.2s">
-                        <div class="bg-primary rounded position-relative overflow-hidden">
-                            <img src="img/about-2.png" class="img-fluid rounded w-100" alt="">
-                            
-                            <div class="" style="position: absolute; top: -15px; right: -15px;">
-                                <img src="img/about-3.png" class="img-fluid" style="width: 150px; height: 150px; opacity: 0.7;" alt="">
-                            </div>
-                            <div class="" style="position: absolute; top: -20px; left: 10px; transform: rotate(90deg);">
-                                <img src="img/about-4.png" class="img-fluid" style="width: 100px; height: 150px; opacity: 0.9;" alt="">
-                            </div>
-                            <div class="rounded-bottom">
-                                <img src="img/about-5.jpg" class="img-fluid rounded-bottom w-100" alt="">
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
-        <!-- About End -->
-
-        <!-- Services Section with ID -->
-        <div id="services" class="container-fluid service pb-5">
-            <div class="container pb-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Nossos serviços</h4>
-                    <h1 class="display-5 mb-4">Oferecemos as melhores soluções para proteger, modernizar e impulsionar o seu negócio</h1>
-                    <p class="mb-0">Na ArkSoft entregamos soluções completas em cibersegurança, CIRT, desenvolvimento de software, aplicativos, sistemas de gestão e consultoria tecnológica.
-Ajudamos a sua empresa a operar com mais segurança, eficiência e confiança, através de tecnologia moderna, processos inteligentes e suporte especializado.</p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="img/service-1.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                            </div>
-                            <div class="rounded-bottom p-4">
-                                <a href="#" class="h4 d-inline-block mb-4"> Cibersegurança & CIRT</a>
-                                <p class="mb-4">Protegemos a sua empresa contra ataques, invasões, ransomwares e perda de dados.
-Realizamos monitoramento contínuo, resposta a incidentes, auditorias, hardening e políticas de segurança para garantir a máxima proteção digital.</p>
-                                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Saiba Mais</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="img/service-2.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                            </div>
-                            <div class="rounded-bottom p-4">
-                                <a href="#" class="h4 d-inline-block mb-4">Desenvolvimento de Software Personalizado</a>
-                                <p class="mb-4">Criamos software web, desktop e SaaS totalmente adaptado às necessidades da sua empresa.
-Sistemas robustos, escaláveis, seguros e prontos para uso corporativo.</p>
-                                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Saiba Mais</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="img/service-3.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                            </div>
-                            <div class="rounded-bottom p-4">
-                                <a href="#" class="h4 d-inline-block mb-4">Desenvolvimento de Aplicativos (Android & iOS)</a>
-                                <p class="mb-4">Construímos apps modernos, rápidos e seguros para qualquer tipo de negócio.
-Aplicações híbridas ou nativas, com integração a sistemas, API e base de dados.</p>
-                                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Saiba Mais</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="img/service-4.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                            </div>
-                            <div class="rounded-bottom p-4">
-                                <a href="#" class="h4 d-inline-block mb-4">Sistema de Gestão & Faturação</a>
-                                <p class="mb-4">Solução completa de faturação e gestão empresarial: vendas, estoque, relatórios, finanças e controle total da operação.
-Simples de usar, seguro e 100% adaptável ao seu negócio.</p>
-                                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Saiba Mais</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="img/service-5.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                            </div>
-                            <div class="rounded-bottom p-4">
-                                <a href="#" class="h4 d-inline-block mb-4">Consultoria Tecnológica (IT Consulting)</a>
-                                <p class="mb-4">Ajudamos empresas a modernizar infraestruturas, migrar para a nuvem, melhorar processos internos e implementar ferramentas que aumentam produtividade e reduzem custos.</p>
-                                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Saiba Mais</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="img/service-6.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                            </div>
-                            <div class="rounded-bottom p-4">
-                                <a href="#" class="h4 d-inline-block mb-4">Pentest & Auditoria de Segurança</a>
-                                <p class="mb-4">Identificamos vulnerabilidades em sistemas, redes, servidores e aplicativos antes que hackers o façam.
-Relatórios completos, recomendações técnicas e correção de falhas.</p>
-                                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Saiba Mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Services End -->
-
-        <!-- Features Section with ID -->
-        <div id="features" class="container-fluid feature pb-5">
-            <div class="container pb-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Nossos Recursos e Soluções</h4>
-                    <h1 class="display-5 mb-4">Tecnologia inteligente para proteger, educar e fortalecer a sua empresa</h1>
-                    <p class="mb-0">Desenvolvemos soluções avançadas em cibersegurança e software que ajudam empresas e utilizadores a manterem-se seguros no ambiente digital.
-Os nossos produtos combinam segurança, automatização, educação digital e inteligência artificial, criando um ecossistema completo de proteção e produtividade.</p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="feature-item p-4">
-                            <div class="feature-icon p-4 mb-4">
-                                <i class="fas fa-chart-line fa-4x text-primary"></i>
-                            </div>
-                            <h4>CyberGuardianPro</h4>
-                            <p class="mb-4">Sistema completo de proteção digital, integrado com monitoramento, análise de ameaças, firewall inteligente, alertas em tempo real e bloqueio automático de atividades suspeitas.
-Ideal para empresas que desejam segurança contínua e um painel de controlo unificado.</p>
-                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Comprar</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="feature-item p-4">
-                            <div class="feature-icon p-4 mb-4">
-                                <i class="fas fa-university fa-4x text-primary"></i>
-                            </div>
-                            <h4>Phishing Frenzy – Jogo de Conscientização</h4>
-                            <p class="mb-4">Um jogo educativo criado para treinar funcionários e estudantes a identificar golpes online, links suspeitos, e técnicas de phishing usadas por hackers.
-Aprender segurança nunca foi tão divertido e eficaz.</p>
-                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Comprar</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="feature-item p-4">
-                            <div class="feature-icon p-4 mb-4">
-                                <i class="fas fa-file-alt fa-4x text-primary"></i>
-                            </div>
-                            <h4>Cofre Digital – Password Fortress</h4>
-                            <p class="mb-4">Armazene e proteja senhas com criptografia de nível militar (AES-256).
-Organização automática, login rápido, cofres múltiplos e proteção anti-invasão.
-Perfeito para utilizadores e empresas que querem manter dados seguros.</p>
-                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Comprar</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="feature-item p-4">
-                            <div class="feature-icon p-4 mb-4">
-                                <i class="fas fa-hand-holding-usd fa-4x text-primary"></i>
-                            </div>
-                            <h4>Email Scam Analyzer – Detector de Burlas em E-mail</h4>
-                            <p class="mb-4">Software inteligente que analisa o texto de e-mails e identifica probabilidades de fraude, phishing, spam e engenharia social.
-Inclui relatórios, alertas e recomendações sobre como proceder.</p>
-                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Comprar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Features End -->
-
-        <!-- Offer Section with ID -->
-        <div id="offer" class="container-fluid offer-section pb-5">
-            <div class="container pb-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Nossa Oferta</h4>
-                    <h1 class="display-5 mb-4">Benefícios que oferecemos para proteger e impulsionar o seu negócio</h1>
-                    <p class="mb-0">Na ArkSoft entregamos soluções inteligentes que aumentam a segurança, reduzem riscos e tornam a operação da sua empresa mais eficiente.
-Combinamos tecnologia moderna, inteligência artificial e práticas avançadas de cibersegurança para oferecer resultados reais e duradouros.</p>
-                </div>
-                <div class="row g-5 align-items-center">
-                    <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.2s">
-                        <div class="nav nav-pills bg-light rounded p-5">
-                            <a class="accordion-link p-4 active mb-4" data-bs-toggle="pill" href="#collapseOne">
-                                <h5 class="mb-0">Identificação Rápida de Vulnerabilidades Reais</h5>
-                            </a>
-                            <a class="accordion-link p-4 mb-4" data-bs-toggle="pill" href="#collapseTwo">
-                                <h5 class="mb-0">Proteção Avançada Contra Phishing e Burlas Digitais</h5>
-                            </a>
-                            <a class="accordion-link p-4 mb-4" data-bs-toggle="pill" href="#collapseThree">
-                                <h5 class="mb-0">Armazenamento Seguro de Credenciais e Dados Sensíveis</h5>
-                            </a>
-                            <a class="accordion-link p-4 mb-0" data-bs-toggle="pill" href="#collapseFour">
-                                <h5 class="mb-0">Monitorização e Relatórios de Segurança 24/7</h5>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.4s">
-                        <div class="tab-content">
-                            <div id="collapseOne" class="tab-pane fade show p-0 active">
-                                <div class="row g-4">
-                                    <div class="col-md-7">
-                                        <img src="img/offer-1.jpg" class="img-fluid w-100 rounded" alt="">
+            <div class="header-carousel-item">
+                <img src="img/carousel-2.jpg" class="img-fluid w-100" alt="Desenvolvimento de Software Personalizado em Luanda" width="1920" height="1080">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row g-5">
+                            <div class="col-12 animated fadeInUp">
+                                <div class="text-center">
+                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Bem-Vindo a ArkPray</h4>
+                                    <h1 class="display-4 text-uppercase text-white mb-4">Soluções seguras, rápidas e escaláveis</h1>
+                                    <p class="mb-5 fs-5">Somos especialistas em Cibersegurança, Desenvolvimento de Software e Consultoria Tecnológica em Angola</p>
+                                    <div class="d-flex justify-content-center flex-shrink-0 mb-4">
+                                        <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#"><i class="fas fa-play-circle me-2"></i> Ver Video</a>
+                                        <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="#about">Saiba Mais</a>
                                     </div>
-                                    <div class="col-md-5">
-                                        <h1 class="display-5 mb-4">Encontre falhas antes que os criminosos encontrem você.</h1>
-                                        <p class="mb-4">Detectamos falhas como senhas fracas, softwares desatualizados, permissões inseguras e práticas vulneráveis antes que os atacantes as explorem.
-Nossos sistemas analisam em tempo real e mostram exatamente onde está o risco.</p>
-                                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Saiba Mais</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="collapseTwo" class="tab-pane fade show p-0">
-                                <div class="row g-4">
-                                    <div class="col-md-7">
-                                        <img src="img/offer-2.jpg" class="img-fluid w-100 rounded" alt="">
-                                    </div>
-                                    <div class="col-md-5">
-                                        <h1 class="display-5 mb-4">Bloqueie tentativas de golpe com tecnologia inteligente.</h1>
-                                        <p class="mb-4">Combinamos o Phishing Frenzy + nosso analisador de e-mails fraudulentos para bloquear tentativas de golpe antes que cheguem ao utilizador.
-O sistema reconhece padrões de burlas, linguagem suspeita e links maliciosos.</p>
-                                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Saiba Mais</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="collapseThree" class="tab-pane fade show p-0">
-                                <div class="row g-4">
-                                    <div class="col-md-7">
-                                        <img src="img/offer-3.jpg" class="img-fluid w-100 rounded" alt="">
-                                    </div>
-                                    <div class="col-md-5">
-                                        <h1 class="display-5 mb-4">Guarde suas informações mais importantes com criptografia militar.</h1>
-                                        <p class="mb-4">O Cofre Digital utiliza criptografia militar para guardar senhas, chaves, PINs e informações confidenciais.
-Mesmo que o computador seja comprometido, os dados permanecem protegidos.</p>
-                                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Saiba Mais</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="collapseFour" class="tab-pane fade show p-0">
-                                <div class="row g-4">
-                                    <div class="col-md-7">
-                                        <img src="img/offer-4.jpg" class="img-fluid w-100 rounded" alt="">
-                                    </div>
-                                    <div class="col-md-5">
-                                        <h1 class="display-5 mb-4">Acompanhe riscos em tempo real e receba alertas imediatos.</h1>
-                                        <p class="mb-4">O CyberGuardianPro acompanha as atividades críticas, analisa acessos, identifica comportamentos anómalos e envia alertas imediatos.
-Você recebe relatórios claros que mostram melhorias, riscos e recomendações.</p>
-                                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Saiba Mais</a>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <h2 class="text-white me-2">Nos Segue:</h2>
+                                        <div class="d-flex justify-content-end ms-2">
+                                            <a class="btn btn-md-square btn-light rounded-circle me-2" href="https://facebook.com/arkprayangola" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://twitter.com/arkprayangola" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://instagram.com/arkprayangola" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle ms-2" href="https://linkedin.com/company/arkprayangola" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -467,415 +195,309 @@ Você recebe relatórios claros que mostram melhorias, riscos e recomendações.
                 </div>
             </div>
         </div>
-        <!-- Offer End -->
+        <!-- Carousel End -->
+    </div>
+    <!-- Navbar & Hero End -->
 
-        <!-- Blog Section with ID -->
-        <div id="blog" class="container-fluid blog pb-5">
-            <div class="container pb-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Nosso Blog & Notícias</h4>
-                    <h1 class="display-5 mb-4">Artigos e atualizações sobre cibersegurança, software e tecnologia empresarial</h1>
-                    <p class="mb-0">Mantenha-se informado com os últimos conteúdos sobre proteção digital, novas ameaças, desenvolvimento de software, automação empresarial e boas práticas de TI.
-Nosso blog é uma fonte confiável de conhecimento, dicas práticas e análises especializadas para empresas, profissionais de TI e entusiastas da tecnologia.</p>
+    <!-- About Section with ID -->
+    <div id="about" class="container-fluid about py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-xl-7 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div>
+                        <h4 class="text-primary">Sobre Nós</h4>
+                        <h1 class="display-5 mb-4">Especialistas em Cibersegurança, Desenvolvimento de Software e Consultoria Tecnológica em Angola</h1>
+                        <p class="mb-4">A ArkPray é uma empresa angolana especializada em CIRT (Computer Incident Response Team), segurança cibernética, desenvolvimento de software profissional, aplicativos móveis e soluções empresariais de gestão e faturação.</p>
+                        <p class="mb-4">Atuamos com foco em garantir segurança digital, eficiência operacional e tecnologia de alta performance para empresas de todos os portes em Angola.</p>
+                        <p class="mb-4">Com uma equipe experiente, certificada e apaixonada por inovação, ajudamos organizações a proteger seus sistemas, automatizar processos, reduzir riscos e melhorar resultados através da tecnologia.</p>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-6 col-xl-6">
+                                <div class="d-flex">
+                                    <div><i class="fas fa-lightbulb fa-3x text-primary"></i></div>
+                                    <div class="ms-4">
+                                        <h4>Consultoria Empresarial</h4>
+                                        <p>Transformamos tecnologia em resultados para empresas em Angola.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-6">
+                                <div class="d-flex">
+                                    <div><i class="bi bi-bookmark-heart-fill fa-3x text-primary"></i></div>
+                                    <div class="ms-4">
+                                        <h4>Anos de Experiência</h4>
+                                        <p>Mais de 5 anos de experiência em TI, cibersegurança, redes e desenvolvimento de software em Angola.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href="#contact" class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0">Descubra Agora</a>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex">
+                                    <i class="fas fa-phone-alt fa-2x text-primary me-4"></i>
+                                    <div>
+                                        <h4>Contacta-nos</h4>
+                                        <p class="mb-0 fs-5" style="letter-spacing: 1px;">+244 932 088 879</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="owl-carousel blog-carousel wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="blog-item p-4">
-                        <div class="blog-img mb-4">
-                            <img src="img/service-1.jpg" class="img-fluid w-100 rounded" alt="">
-                            <div class="blog-title">
-                                <a href="#" class="btn">Cibersegurança</a>
-                            </div>
+                <div class="col-xl-5 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="bg-primary rounded position-relative overflow-hidden">
+                        <img src="img/about-2.png" class="img-fluid rounded w-100" alt="Equipe ArkPray Angola" width="500" height="400">
+                        
+                        <div class="" style="position: absolute; top: -15px; right: -15px;">
+                            <img src="img/about-3.png" class="img-fluid" style="width: 150px; height: 150px; opacity: 0.7;" alt="Cibersegurança Angola" width="150" height="150">
                         </div>
-                        <a href="#" class="h4 d-inline-block mb-3">Empresas angolanas vulneráveis a ataques digitais</a>
-                        <p class="mb-4">Nossas análises revelaram que muitas empresas em Angola ainda usam senhas fracas, sistemas desatualizados e falhas de autenticação, tornando-se alvos fáceis para hackers. O CyberGuardianPro ajuda a monitorar e proteger essas vulnerabilidades em tempo real.
-       </p>
-                        <div class="d-flex align-items-center">
-                            <img src="img/testimonial-1.jpg" class="img-fluid rounded-circle" style="width: 60px; height: 60px;" alt="">
-                            <div class="ms-3">
-                                <h5>Admin</h5>
-                                <p class="mb-0">October 9, 2025</p>
-                            </div>
+                        <div class="" style="position: absolute; top: -20px; left: 10px; transform: rotate(90deg);">
+                            <img src="img/about-4.png" class="img-fluid" style="width: 100px; height: 150px; opacity: 0.9;" alt="Desenvolvimento Software Luanda" width="100" height="150">
                         </div>
-                    </div>
-                    <div class="blog-item p-4">
-                        <div class="blog-img mb-4">
-                            <img src="img/service-2.jpg" class="img-fluid w-100 rounded" alt="">
-                            <div class="blog-title">
-                                <a href="#" class="btn">Cofre Digital</a>
-                            </div>
-                        </div>
-                        <a href="#" class="h4 d-inline-block mb-3">Proteja senhas e dados sensíveis das empresas</a>
-                        <p class="mb-4">
-            Muitas organizações ainda armazenam credenciais e dados críticos sem criptografia, expondo informações confidenciais. O Cofre Digital garante proteção máxima com criptografia AES-256, evitando acessos não autorizados.
-        </p>
-                        <div class="d-flex align-items-center">
-                            <img src="img/testimonial-2.jpg" class="img-fluid rounded-circle" style="width: 60px; height: 60px;" alt="">
-                            <div class="ms-3">
-                                <h5>Admin</h5>
-                                <p class="mb-0">October 9, 2025</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-item p-4">
-                        <div class="blog-img mb-4">
-                            <img src="img/service-3.jpg" class="img-fluid w-100 rounded" alt="">
-                            <div class="blog-title">
-                                <a href="#" class="btn">Phishing Frenzy</a>
-                            </div>
-                        </div>
-                        <a href="#" class="h4 d-inline-block mb-3">Treinamento prático contra ataques de phishing</a>
-                        <p class="mb-4">O phishing continua sendo uma das maiores ameaças em empresas angolanas. O nosso jogo educativo Phishing Frenzy treina colaboradores de forma divertida e eficaz, ensinando-os a identificar links suspeitos e mensagens fraudulentas.
-       </p>
-                        <div class="d-flex align-items-center">
-                            <img src="img/testimonial-3.jpg" class="img-fluid rounded-circle" style="width: 60px; height: 60px;" alt="">
-                            <div class="ms-3">
-                                <h5>Admin</h5>
-                                <p class="mb-0">October 9, 2025</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-item p-4">
-                        <div class="blog-img mb-4">
-                            <img src="img/service-4.jpg" class="img-fluid w-100 rounded" alt="">
-                            <div class="blog-title">
-                                <a href="#" class="btn">Email Scam Analyzer</a>
-                            </div>
-                        </div>
-                        <a href="#" class="h4 d-inline-block mb-3">Evite fraudes por email antes que causem prejuízos</a>
-                        <p class="mb-4">
-            A análise de e-mails com conteúdo suspeito é essencial para prevenir fraudes corporativas. Nosso Email Scam Analyzer identifica padrões de burla, phishing e engenharia social, protegendo empresas de perdas financeiras e vazamentos de dados.
-        </p>
-                        <div class="d-flex align-items-center">
-                            <img src="img/testimonial-1.jpg" class="img-fluid rounded-circle" style="width: 60px; height: 60px;" alt="">
-                            <div class="ms-3">
-                                <h5>Admin</h5>
-                                <p class="mb-0">October 9, 2025</p>
-                            </div>
+                        <div class="rounded-bottom">
+                            <img src="img/about-5.jpg" class="img-fluid rounded-bottom w-100" alt="Consultoria Tecnológica Angola" width="500" height="300">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Blog End -->
+    </div>
+    <!-- About End -->
 
-        <!-- FAQs Section with ID -->
-        <div id="faq" class="container-fluid faq-section pb-5">
-            <div class="container pb-5 overflow-hidden">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Perguntas Frequentes (FAQs)</h4>
-                    <h1 class="display-5 mb-4"></h1>
-                    <p class="mb-0">Tire suas dúvidas sobre nossos serviços e soluções </p>
-                </div>
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
-                        <div class="accordion accordion-flush bg-light rounded p-5" id="accordionFlushSection">
-                            <div class="accordion-item rounded-top">
-                                <h2 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                    O que é o CyberGuardianPro e como protege minha empresa?
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushSection">
-                                    <div class="accordion-body">O CyberGuardianPro é um sistema completo de monitoramento e proteção digital. Ele detecta ameaças em tempo real, bloqueia acessos suspeitos e envia alertas imediatos, garantindo que sua empresa esteja protegida contra ataques cibernéticos.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                    Como funciona o Cofre Digital / Password Fortress?
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushSection">
-                                    <div class="accordion-body">O Cofre Digital armazena senhas, chaves e dados sensíveis com criptografia AES-256. Mesmo que um dispositivo seja comprometido, suas informações permanecem seguras. Ele também permite organizar, compartilhar e acessar credenciais de forma prática.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                    O que é o Phishing Frenzy?
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushSection">
-                                    <div class="accordion-body">É um jogo educativo que treina funcionários e utilizadores a identificar golpes de phishing, links suspeitos e tentativas de engenharia social. Aprender sobre cibersegurança nunca foi tão divertido e eficaz.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                                    O Email Scam Analyzer realmente detecta fraudes?
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushSection">
-                                    <div class="accordion-body">Sim! Ele analisa o conteúdo de e-mails, identifica padrões de burla e phishing, e gera alertas com recomendações. É uma ferramenta preventiva que reduz drasticamente riscos de fraude e perda de dados.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingFive">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                                   Posso usar seus softwares em pequenas empresas ou apenas grandes corporações?
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushSection">
-                                    <div class="accordion-body">Nossas soluções são escaláveis. Elas funcionam tanto para pequenas empresas quanto para médias e grandes corporações, garantindo segurança, automação e produtividade adequadas ao tamanho do negócio.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item rounded-bottom">
-                                <h2 class="accordion-header" id="flush-headingSix">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-                                   Quais vulnerabilidades vocês identificam nas empresas?
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushSection">
-                                    <div class="accordion-body">Durante auditorias, detectamos falhas como:
-
-Senhas fracas ou reutilizadas
-
-Sistemas desatualizados
-
-Permissões incorretas
-
-Falhas em APIs e aplicativos
-
-Phishing e ataques de engenharia social
-
-Após a identificação, oferecemos soluções concretas para mitigação e prevenção.</div>
-                                </div>
-                            </div>
+    <!-- Services Section with ID -->
+    <div id="services" class="container-fluid service pb-5">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Nossos serviços</h4>
+                <h1 class="display-5 mb-4">Oferecemos as melhores soluções para proteger, modernizar e impulsionar o seu negócio em Angola</h1>
+                <p class="mb-0">Na ArkPray entregamos soluções completas em cibersegurança, CIRT, desenvolvimento de software, aplicativos, sistemas de gestão e consultoria tecnológica para empresas angolanas. Ajudamos a sua empresa a operar com mais segurança, eficiência e confiança, através de tecnologia moderna, processos inteligentes e suporte especializado.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="img/service-1.jpg" class="img-fluid rounded-top w-100" alt="Cibersegurança e CIRT Angola" width="350" height="200">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <h3 class="h4 d-inline-block mb-4">Cibersegurança & CIRT</h3>
+                            <p class="mb-4">Protegemos a sua empresa contra ataques, invasões, ransomwares e perda de dados. Realizamos monitoramento contínuo, resposta a incidentes, auditorias, hardening e políticas de segurança para garantir a máxima proteção digital em Angola.</p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Saiba Mais</a>
                         </div>
                     </div>
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
-                        <div class="bg-primary rounded">
-                            <img src="img/about-2.png" class="img-fluid w-100" alt="">
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="img/service-2.jpg" class="img-fluid rounded-top w-100" alt="Desenvolvimento Software Personalizado Angola" width="350" height="200">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <h3 class="h4 d-inline-block mb-4">Desenvolvimento de Software Personalizado</h3>
+                            <p class="mb-4">Criamos software web, desktop e SaaS totalmente adaptado às necessidades da sua empresa em Angola. Sistemas robustos, escaláveis, seguros e prontos para uso corporativo.</p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="img/service-3.jpg" class="img-fluid rounded-top w-100" alt="Aplicativos Móveis Android iOS Angola" width="350" height="200">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <h3 class="h4 d-inline-block mb-4">Desenvolvimento de Aplicativos (Android & iOS)</h3>
+                            <p class="mb-4">Construímos apps modernos, rápidos e seguros para qualquer tipo de negócio em Angola. Aplicações híbridas ou nativas, com integração a sistemas, API e base de dados.</p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="img/service-4.jpg" class="img-fluid rounded-top w-100" alt="Sistema Gestão Faturação Angola" width="350" height="200">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <h3 class="h4 d-inline-block mb-4">Sistema de Gestão & Faturação</h3>
+                            <p class="mb-4">Solução completa de faturação e gestão empresarial: vendas, estoque, relatórios, finanças e controle total da operação. Simples de usar, seguro e 100% adaptável ao seu negócio em Angola.</p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="img/service-5.jpg" class="img-fluid rounded-top w-100" alt="Consultoria Tecnológica Angola" width="350" height="200">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <h3 class="h4 d-inline-block mb-4">Consultoria Tecnológica (IT Consulting)</h3>
+                            <p class="mb-4">Ajudamos empresas a modernizar infraestruturas, migrar para a nuvem, melhorar processos internos e implementar ferramentas que aumentam produtividade e reduzem custos em Angola.</p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="img/service-6.jpg" class="img-fluid rounded-top w-100" alt="Pentest Auditoria Segurança Angola" width="350" height="200">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <h3 class="h4 d-inline-block mb-4">Pentest & Auditoria de Segurança</h3>
+                            <p class="mb-4">Identificamos vulnerabilidades em sistemas, redes, servidores e aplicativos antes que hackers o façam. Relatórios completos, recomendações técnicas e correção de falhas para empresas angolanas.</p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Saiba Mais</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- FAQs End -->
+    </div>
+    <!-- Services End -->
 
-        <!-- Testimonial Section with ID -->
-        <div id="testimonial" class="container-fluid testimonial pb-5">
-            <div class="container pb-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Depoimento</h4>
-                    <h1 class="display-5 mb-4">Opiniões de nossos clientes</h1>
-                    <p class="mb-0"></p>
+    <!-- Features Section with ID -->
+    <div id="features" class="container-fluid feature pb-5">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Nossos Recursos e Soluções</h4>
+                <h1 class="display-5 mb-4">Tecnologia inteligente para proteger, educar e fortalecer a sua empresa</h1>
+                <p class="mb-0">Desenvolvemos soluções avançadas em cibersegurança e software que ajudam empresas e utilizadores a manterem-se seguros no ambiente digital. Os nossos produtos combinam segurança, automatização, educação digital e inteligência artificial, criando um ecossistema completo de proteção e produtividade.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-chart-line fa-4x text-primary"></i>
+                        </div>
+                        <h4>CyberGuardianPro</h4>
+                        <p class="mb-4">Sistema completo de proteção digital, integrado com monitoramento, análise de ameaças, firewall inteligente, alertas em tempo real e bloqueio automático de atividades suspeitas. Ideal para empresas que desejam segurança contínua e um painel de controlo unificado.</p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Comprar</a>
+                    </div>
                 </div>
-                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="testimonial-item">
-                        <div class="testimonial-quote-left">
-                            <i class="fas fa-quote-left fa-2x"></i>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-university fa-4x text-primary"></i>
                         </div>
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-1.jpg" class="img-fluid" alt="Image">
+                        <h4>Phishing Frenzy – Jogo de Conscientização</h4>
+                        <p class="mb-4">Um jogo educativo criado para treinar funcionários e estudantes a identificar golpes online, links suspeitos, e técnicas de phishing usadas por hackers. Aprender segurança nunca foi tão divertido e eficaz.</p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Comprar</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-file-alt fa-4x text-primary"></i>
                         </div>
-                        <div class="testimonial-text">
-                            <p class="mb-0">"CyberGuardianPro mudou a forma como protegemos nossos dados. Agora conseguimos monitorar ameaças em tempo real e agir antes que qualquer ataque cause danos."</p>
+                        <h4>Cofre Digital – Password Fortress</h4>
+                        <p class="mb-4">Armazene e proteja senhas com criptografia de nível militar (AES-256). Organização automática, login rápido, cofres múltiplos e proteção anti-invasão. Perfeito para utilizadores e empresas que querem manter dados seguros.</p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Comprar</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-hand-holding-usd fa-4x text-primary"></i>
                         </div>
-                        <div class="testimonial-title">
-                            <div>
-                                <h4 class="mb-0">João Silva, Diretor de TI</h4>
-                                <p class="mb-0">Empresa X</p>
-                            </div>
-                            <div class="d-flex text-primary">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                        <h4>Email Scam Analyzer – Detector de Burlas em E-mail</h4>
+                        <p class="mb-4">Software inteligente que analisa o texto de e-mails e identifica probabilidades de fraude, phishing, spam e engenharia social. Inclui relatórios, alertas e recomendações sobre como proceder.</p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+    <!-- Footer Section with ID -->
+    <div id="contact" class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5 border-start-0 border-end-0" style="border: 1px solid; border-color: rgb(255, 255, 255, 0.08);">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="footer-item">
+                        <a href="#home" class="p-0">
+                            <h4 class="text-white"><i class="fas fa-shield-alt me-2"></i>ArkPray</h4>
+                        </a>
+                        <p class="mb-4">Garantimos soluções completas de cibersegurança, software corporativo e treinamento para empresas de todos os tamanhos em Angola, protegendo seus dados, automatizando processos e capacitando sua equipe.</p>
+                    </div>
+                </div>
+                
+                <!-- Seção de Contato -->
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Contacto Info</h4>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                            <p class="text-white mb-0">Luanda - Angola</p>
                         </div>
-                        <div class="testimonial-quote-right">
-                            <i class="fas fa-quote-right fa-2x"></i>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-envelope text-primary me-3"></i>
+                            <p class="text-white mb-0">arkpraycps@gmail.com</p>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="fa fa-phone-alt text-primary me-3"></i>
+                            <p class="text-white mb-0">+244 932 088 879</p>
+                        </div>
+                        <div class="d-flex">
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://facebook.com/arkprayangola" aria-label="Facebook"><i class="fab fa-facebook-f text-white"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://twitter.com/arkprayangola" aria-label="Twitter"><i class="fab fa-twitter text-white"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://instagram.com/arkprayangola" aria-label="Instagram"><i class="fab fa-instagram text-white"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-0" href="https://linkedin.com/company/arkprayangola" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-white"></i></a>
                         </div>
                     </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-quote-left">
-                            <i class="fas fa-quote-left fa-2x"></i>
-                        </div>
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-2.jpg" class="img-fluid" alt="Image">
-                        </div>
-                        <div class="testimonial-text">
-                            <p class="mb-0">"O Cofre Digital nos trouxe segurança total nas senhas e credenciais corporativas. É confiável e muito fácil de usar."</p>
-                        </div>
-                        <div class="testimonial-title">
-                            <div>
-                                <h4 class="mb-0">Ana Pereira, Gerente Financeira</h4>
-                                <p class="mb-0">Empresa Y</p>
+                </div>
+                
+                <!-- Nova Seção de Newsletter -->
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Receba Nossas Novidades</h4>
+                        <p class="mb-4">Inscreva-se para receber as últimas atualizações sobre cibersegurança, novos produtos e ofertas especiais.</p>
+                        <form class="newsletter-form">
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control bg-dark text-white border-primary" placeholder="Seu e-mail" aria-label="Seu e-mail" required>
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
                             </div>
-                            <div class="d-flex text-primary">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="testimonial-quote-right">
-                            <i class="fas fa-quote-right fa-2x"></i>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-quote-left">
-                            <i class="fas fa-quote-left fa-2x"></i>
-                        </div>
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-3.jpg" class="img-fluid" alt="Image">
-                        </div>
-                        <div class="testimonial-text">
-                            <p class="mb-0">"O jogo Phishing Frenzy foi uma solução divertida e prática para treinar nossa equipe. Reduzimos significativamente erros humanos em e-mails suspeitos."</p>
-                        </div>
-                        <div class="testimonial-title">
-                            <div>
-                                <h4 class="mb-0">Carlos Mendes, RH</h4>
-                                <p class="mb-0">Empresa Z</p>
-                            </div>
-                            <div class="d-flex text-primary">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="testimonial-quote-right">
-                            <i class="fas fa-quote-right fa-2x"></i>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-quote-left">
-                            <i class="fas fa-quote-left fa-2x"></i>
-                        </div>
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-2.jpg" class="img-fluid" alt="Image">
-                        </div>
-                        <div class="testimonial-text">
-                            <p class="mb-0">"O Email Scam Analyzer é incrível! Antes perdíamos tempo analisando e-mails suspeitos manualmente. Agora, temos alertas automáticos e relatórios precisos."</p>
-                        </div>
-                        <div class="testimonial-title">
-                            <div>
-                                <h4 class="mb-0">Fernanda Gomes, Administradora</h4>
-                                <p class="mb-0">Startup W</p>
-                            </div>
-                            <div class="d-flex text-primary">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="testimonial-quote-right">
-                            <i class="fas fa-quote-right fa-2x"></i>
+                        </form>
+                        <div class="mt-3">
+                            <small class="text-muted">Respeitamos sua privacidade. Você pode cancelar a qualquer momento.</small>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Testimonial End -->
-
-        <!-- Contact Section with ID -->
-        <div id="contact" class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5 border-start-0 border-end-0" style="border: 1px solid; border-color: rgb(255, 255, 255, 0.08);">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-4">
-                        <div class="footer-item">
-                            <a href="#home" class="p-0">
-                                <h4 class="text-white"></i>ArkSoft</h4>
-                                <!-- <img src="img/logo.png" alt="Logo"> -->
-                            </a>
-                            <p class="mb-4">Por que escolher a nossa empresa?
-
-Garantimos soluções completas de cibersegurança, software corporativo e treinamento para empresas de todos os tamanhos, protegendo seus dados, automatizando processos e capacitando sua equipe.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-2">
-                        <div class="footer-item">
-                            <h4 class="text-white mb-4">Links rápidos</h4>
-                            <a href="#about"><i class="fas fa-angle-right me-2"></i> Sobre Nós</a>
-                            <a href="#features"><i class="fas fa-angle-right me-2"></i> Recursos</a>
-                            <a href="#blog"><i class="fas fa-angle-right me-2"></i> Blog</a>
-                            <a href="#contact"><i class="fas fa-angle-right me-2"></i> Contacta-nos</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item">
-                            <h4 class="text-white mb-4">Suporte</h4>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Politicas e Privacidades</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Termos & Condições</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Supporte</a>
-                            <a href="#faq"><i class="fas fa-angle-right me-2"></i> FAQ</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item">
-                            <h4 class="text-white mb-4">Contacto Info</h4>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                                <p class="text-white mb-0">Luanda - Angola</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-envelope text-primary me-3"></i>
-                                <p class="text-white mb-0">arkpraycps@gmail.com</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <i class="fa fa-phone-alt text-primary me-3"></i>
-                                <p class="text-white mb-0">+244932088879</p>
-                            </div>
-                            <div class="d-flex align-items-center mb-4">
-                            </div>
-                            <div class="d-flex">
-                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-facebook-f text-white"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-twitter text-white"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-instagram text-white"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-circle me-0" href="#"><i class="fab fa-linkedin-in text-white"></i></a>
-                            </div>
-                        </div>
-                    </div>
+    </div>
+    <!-- Footer End -->
+    
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>ArkPray Angola</a>, Todos os direitos reservados.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-body">
+                    <a href="/politica-privacidade" class="text-white me-3">Política de Privacidade</a>
+                    <a href="/termos-uso" class="text-white">Termos de Uso</a>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
-        
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>ARKPRAY</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-body">
-                        <!--/*** This template is free as long as you keep the below author's credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author's credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/--> </div>
-                </div>
-            </div>
-        </div>
-        <!-- Copyright End -->
+    </div>
+    <!-- Copyright End -->
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
-        <!-- JavaScript Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
 </html>
-
-
-
-
-
 
 
 
