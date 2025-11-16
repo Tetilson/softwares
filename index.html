@@ -3,19 +3,18 @@
 
 <head>
     <meta charset="utf-8">
-    <title>ArkPray Angola - Líder em Cibersegurança e Soluções Tecnológicas</title>
-    <meta name="description" content="ArkPray Angola: Consultoria especializada em cibersegurança, desenvolvimento de software empresarial e transformação digital. Proteção avançada para empresas em Angola.">
-    <meta name="keywords" content="cibersegurança angola, consultoria TI luanda, desenvolvimento software empresarial, segurança digital, CIRT angola, pentest, compliance digital">
+    <title>ArkPray - Cibersegurança e Desenvolvimento de Software em Angola</title>
+    <meta name="description" content="ArkPray: Especialistas em cibersegurança, desenvolvimento de software, aplicativos móveis e consultoria tecnológica em Angola. Soluções seguras para empresas.">
+    <meta name="keywords" content="cibersegurança angola, desenvolvimento software luanda, aplicativos móveis, consultoria TI, pentest, CIRT, cyber segurança, empresa TI angola, segurança digital">
     <meta name="author" content="ArkPray Angola">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="ArkPray Angola - Especialistas em Cibersegurança e Inovação Digital">
-    <meta property="og:description" content="Soluções empresariais em cibersegurança, desenvolvimento de software e consultoria tecnológica para organizações em Angola.">
+    <meta property="og:title" content="ArkPray - Cibersegurança e Desenvolvimento de Software em Angola">
+    <meta property="og:description" content="Especialistas em cibersegurança, desenvolvimento de software e consultoria tecnológica em Angola. Proteção digital avançada para empresas.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arkpray.vercel.app">
-    <meta property="og:image" content="https://arkpray.vercel.app/img/og-image.jpg">
-    <meta property="og:locale" content="pt_AO">
+    <meta property="og:image" content="https://arkpray.vercel.app/img/logo-og.jpg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://arkpray.vercel.app">
@@ -25,13 +24,12 @@
     {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "ArkPray Angola",
+        "name": "ArkPray",
         "url": "https://arkpray.vercel.app",
         "logo": "https://arkpray.vercel.app/img/logo.png",
-        "description": "Líder em soluções de cibersegurança e desenvolvimento tecnológico para empresas em Angola",
+        "description": "Especialistas em cibersegurança, desenvolvimento de software e consultoria tecnológica em Angola",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Luanda",
             "addressLocality": "Luanda",
             "addressCountry": "AO"
         },
@@ -39,651 +37,461 @@
             "@type": "ContactPoint",
             "telephone": "+244-932-088-879",
             "contactType": "customer service",
-            "email": "arkpraycps@gmail.com",
-            "areaServed": "AO",
-            "availableLanguage": ["pt", "en"]
+            "email": "arkpraycps@gmail.com"
         },
         "sameAs": [
-            "https://www.linkedin.com/company/arkprayangola",
-            "https://www.facebook.com/arkprayangola"
+            "https://www.facebook.com/arkprayangola",
+            "https://www.linkedin.com/company/arkprayangola"
         ]
     }
     </script>
 
-    <!-- Preload critical resources -->
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="lib/animate/animate.min.css"/>
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    <style>
-        :root {
-            --primary: #0066FF;
-            --primary-dark: #0052CC;
-            --secondary: #6C757D;
-            --dark: #1A1D29;
-            --light: #F8F9FA;
-            --accent: #00D4AA;
-            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.7;
-            color: #333;
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 700;
-            line-height: 1.3;
-        }
-        
-        /* Header & Navigation */
-        .navbar {
-            padding: 1rem 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .navbar-scrolled {
-            background: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .navbar-brand {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--dark);
-        }
-        
-        .navbar-nav .nav-link {
-            font-weight: 500;
-            color: var(--dark);
-            margin: 0 0.5rem;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .navbar-nav .nav-link:hover,
-        .navbar-nav .nav-link.active {
-            background: var(--gradient);
-            color: white;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--dark) 0%, #2D3748 100%);
-            color: white;
-            padding: 120px 0 80px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.03)" points="0,1000 1000,0 1000,1000"/></svg>');
-            background-size: cover;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero-badge {
-            background: var(--gradient);
-            color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 1.5rem;
-        }
-        
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #fff 0%, #e2e8f0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.3rem;
-            color: #cbd5e0;
-            margin-bottom: 2.5rem;
-            max-width: 600px;
-        }
-        
-        /* Buttons */
-        .btn {
-            padding: 0.8rem 2rem;
-            border-radius: 10px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn-primary {
-            background: var(--gradient);
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
-            color: white;
-        }
-        
-        .btn-outline-light {
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            background: transparent;
-        }
-        
-        .btn-outline-light:hover {
-            background: white;
-            color: var(--dark);
-            transform: translateY(-2px);
-        }
-        
-        /* Sections */
-        .section {
-            padding: 100px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .section-title .badge {
-            background: var(--gradient);
-            color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            display: inline-block;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 1rem;
-        }
-        
-        .section-title p {
-            color: var(--secondary);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        /* Service Cards */
-        .service-card {
-            background: white;
-            border-radius: 20px;
-            padding: 2.5rem;
-            height: 100%;
-            transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-        }
-        
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-            color: white;
-        }
-        
-        .service-card h4 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-        
-        .service-card p {
-            color: var(--secondary);
-            margin-bottom: 1.5rem;
-        }
-        
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .feature-item {
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        .feature-icon {
-            width: 100px;
-            height: 100px;
-            background: var(--gradient);
-            border-radius: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2.5rem;
-            color: white;
-        }
-        
-        /* Stats Section */
-        .stats-section {
-            background: var(--gradient);
-            color: white;
-            padding: 80px 0;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--dark) 0%, #2D3748 100%);
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-        }
-        
-        .cta-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .cta-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* Footer */
-        .footer {
-            background: var(--dark);
-            color: white;
-            padding: 80px 0 40px;
-        }
-        
-        .footer-brand {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .footer-links h5 {
-            color: white;
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-        }
-        
-        .footer-links a {
-            color: #cbd5e0;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .social-links a {
-            width: 45px;
-            height: 45px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background: var(--primary);
-            transform: translateY(-2px);
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .section {
-                padding: 60px 0;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-shield-alt me-2"></i>ArkPray
-            </a>
-            <button class="navbar-toggler" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#home">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#solutions">Soluções</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-                </ul>
-                <a href="#contact" class="btn btn-primary ms-3">
-                    <i class="fas fa-comments me-2"></i>Consultoria
-                </a>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="hero-content">
-                        <span class="hero-badge">
-                            <i class="fas fa-star me-2"></i>Líder em Cibersegurança
-                        </span>
-                        <h1 class="hero-title">Proteção Digital Avançada para Empresas em Angola</h1>
-                        <p class="hero-subtitle">Soluções empresariais em cibersegurança, desenvolvimento de software e transformação digital para organizações de todos os portes.</p>
-                        <div class="hero-buttons">
-                            <a href="#services" class="btn btn-primary me-3">
-                                <i class="fas fa-shield-alt me-2"></i>Nossos Serviços
-                            </a>
-                            <a href="#contact" class="btn btn-outline-light">
-                                <i class="fas fa-phone me-2"></i>Fale Connosco
-                            </a>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar bg-light px-5 d-none d-lg-block">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-flex flex-wrap">
+                    <span class="text-muted small me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Luanda – Angola</span>
+                    <a href="tel:+244932088879" class="text-muted small me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+244 932 088 879</a>
+                    <a href="mailto:arkpraycps@gmail.com" class="text-muted small me-0"><i class="fas fa-envelope text-primary me-2"></i>arkpraycps@gmail.com</a>
+                </div>
+            </div>
+           <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                   <a href="#"><small class="me-3 text-dark"><i class="fa fa-user text-primary me-2"></i>Registrar</small></a>
+                    <a href="#"><small class="me-3 text-dark"><i class="fa fa-sign-in-alt text-primary me-2"></i>Login</small></a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i class="fa fa-home text-primary me-2"></i> Meu Painel</small></a>
+                        <div class="dropdown-menu rounded">
+                            <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> Meu Perfil</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-comment-alt me-2"></i> Caixa de Entrada</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-bell me-2"></i> Notificações</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Configurações</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Sair</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <!-- Hero illustration would go here -->
-                    <div style="height: 400px; background: rgba(255,255,255,0.1); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5);">
-                        <i class="fas fa-lock" style="font-size: 8rem;"></i>
+            </div> 
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="https://arkpray.vercel.app" class="navbar-brand p-0">
+                <h1 class="text-primary"><i class="fas fa-shield-alt me-2"></i>ArkPray</h1>
+                <!-- <img src="img/logo.png" alt="ArkPray - Cibersegurança Angola" width="120" height="40"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="#home" class="nav-item nav-link active">Home</a>
+                    <a href="#about" class="nav-item nav-link">Sobre</a>
+                    <a href="#services" class="nav-item nav-link">Serviços</a>
+                    <a href="#features" class="nav-item nav-link">Recursos</a>
+                    <a href="#offer" class="nav-item nav-link">Ofertas</a>
+                    <a href="#blog" class="nav-item nav-link">Blog</a>
+                </div>
+                <a href="#contact" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Consultoria</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section with ID for navigation -->
+        <div id="home" class="header-carousel owl-carousel">
+            <div class="header-carousel-item">
+                <img src="img/carousel-1.jpg" class="img-fluid w-100" alt="Cibersegurança e Proteção Digital em Angola" width="1920" height="1080">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row gy-0 gx-5">
+                            <div class="col-lg-0 col-xl-5"></div>
+                            <div class="col-xl-7 animated fadeInLeft">
+                                <div class="text-sm-center text-md-end">
+                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Bem-Vindo a ArkPray</h4>
+                                    <h1 class="display-4 text-uppercase text-white mb-4">Soluções seguras, rápidas e escaláveis</h1>
+                                    <p class="mb-5 fs-5">Somos especialistas em Cibersegurança, Desenvolvimento de Software e Consultoria Tecnológica em Angola</p>
+                                    <div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
+                                        <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#"><i class="fas fa-play-circle me-2"></i>Ver Video</a>
+                                        <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="#about">Saiba Mais</a>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center justify-content-md-end">
+                                        <h2 class="text-white me-2">Nos Segue:</h2>
+                                        <div class="d-flex justify-content-end ms-2">
+                                            <a class="btn btn-md-square btn-light rounded-circle me-2" href="https://facebook.com/arkprayangola" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://twitter.com/arkprayangola" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://instagram.com/arkprayangola" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle ms-2" href="https://linkedin.com/company/arkprayangola" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-carousel-item">
+                <img src="img/carousel-2.jpg" class="img-fluid w-100" alt="Desenvolvimento de Software Personalizado em Luanda" width="1920" height="1080">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row g-5">
+                            <div class="col-12 animated fadeInUp">
+                                <div class="text-center">
+                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Bem-Vindo a ArkPray</h4>
+                                    <h1 class="display-4 text-uppercase text-white mb-4">Soluções seguras, rápidas e escaláveis</h1>
+                                    <p class="mb-5 fs-5">Somos especialistas em Cibersegurança, Desenvolvimento de Software e Consultoria Tecnológica em Angola</p>
+                                    <div class="d-flex justify-content-center flex-shrink-0 mb-4">
+                                        <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#"><i class="fas fa-play-circle me-2"></i> Ver Video</a>
+                                        <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="#about">Saiba Mais</a>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <h2 class="text-white me-2">Nos Segue:</h2>
+                                        <div class="d-flex justify-content-end ms-2">
+                                            <a class="btn btn-md-square btn-light rounded-circle me-2" href="https://facebook.com/arkprayangola" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://twitter.com/arkprayangola" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://instagram.com/arkprayangola" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                            <a class="btn btn-md-square btn-light rounded-circle ms-2" href="https://linkedin.com/company/arkprayangola" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        <!-- Carousel End -->
+    </div>
+    <!-- Navbar & Hero End -->
 
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-3 col-6">
-                    <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Clientes Satisfeitos</div>
+    <!-- About Section with ID -->
+    <div id="about" class="container-fluid about py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-xl-7 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div>
+                        <h4 class="text-primary">Sobre Nós</h4>
+                        <h1 class="display-5 mb-4">Especialistas em Cibersegurança, Desenvolvimento de Software e Consultoria Tecnológica em Angola</h1>
+                        <p class="mb-4">A ArkPray é uma empresa angolana especializada em CIRT (Computer Incident Response Team), segurança cibernética, desenvolvimento de software profissional, aplicativos móveis e soluções empresariais de gestão e faturação.</p>
+                        <p class="mb-4">Atuamos com foco em garantir segurança digital, eficiência operacional e tecnologia de alta performance para empresas de todos os portes em Angola.</p>
+                        <p class="mb-4">Com uma equipe experiente, certificada e apaixonada por inovação, ajudamos organizações a proteger seus sistemas, automatizar processos, reduzir riscos e melhorar resultados através da tecnologia.</p>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-6 col-xl-6">
+                                <div class="d-flex">
+                                    <div><i class="fas fa-lightbulb fa-3x text-primary"></i></div>
+                                    <div class="ms-4">
+                                        <h4>Consultoria Empresarial</h4>
+                                        <p>Transformamos tecnologia em resultados para empresas em Angola.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-6">
+                                <div class="d-flex">
+                                    <div><i class="bi bi-bookmark-heart-fill fa-3x text-primary"></i></div>
+                                    <div class="ms-4">
+                                        <h4>Anos de Experiência</h4>
+                                        <p>Mais de 5 anos de experiência em TI, cibersegurança, redes e desenvolvimento de software em Angola.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href="#contact" class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0">Descubra Agora</a>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex">
+                                    <i class="fas fa-phone-alt fa-2x text-primary me-4"></i>
+                                    <div>
+                                        <h4>Contacta-nos</h4>
+                                        <p class="mb-0 fs-5" style="letter-spacing: 1px;">+244 932 088 879</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-item">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Anos de Experiência</div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-item">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Suporte Técnico</div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Satisfação do Cliente</div>
+                <div class="col-xl-5 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="bg-primary rounded position-relative overflow-hidden">
+                        <img src="img/about-2.png" class="img-fluid rounded w-100" alt="Equipe ArkPray Angola" width="500" height="400">
+                        
+                        <div class="" style="position: absolute; top: -15px; right: -15px;">
+                            <img src="img/about-3.png" class="img-fluid" style="width: 150px; height: 150px; opacity: 0.7;" alt="Cibersegurança Angola" width="150" height="150">
+                        </div>
+                        <div class="" style="position: absolute; top: -20px; left: 10px; transform: rotate(90deg);">
+                            <img src="img/about-4.png" class="img-fluid" style="width: 100px; height: 150px; opacity: 0.9;" alt="Desenvolvimento Software Luanda" width="100" height="150">
+                        </div>
+                        <div class="rounded-bottom">
+                            <img src="img/about-5.jpg" class="img-fluid rounded-bottom w-100" alt="Consultoria Tecnológica Angola" width="500" height="300">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    <!-- About End -->
 
-    <!-- Services Section -->
-    <section id="services" class="section">
-        <div class="container">
-            <div class="section-title">
-                <span class="badge">Nossos Serviços</span>
-                <h2>Soluções Empresariais Completas</h2>
-                <p>Oferecemos um portfólio abrangente de serviços tecnológicos para impulsionar o seu negócio</p>
+    <!-- Services Section with ID -->
+    <div id="services" class="container-fluid service pb-5">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Nossos serviços</h4>
+                <h1 class="display-5 mb-4">Oferecemos as melhores soluções para proteger, modernizar e impulsionar o seu negócio em Angola</h1>
+                <p class="mb-0">Na ArkPray entregamos soluções completas em cibersegurança, CIRT, desenvolvimento de software, aplicativos, sistemas de gestão e consultoria tecnológica para empresas angolanas. Ajudamos a sua empresa a operar com mais segurança, eficiência e confiança, através de tecnologia moderna, processos inteligentes e suporte especializado.</p>
             </div>
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-shield-alt"></i>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="img/service-1.jpg" class="img-fluid rounded-top w-100" alt="Cibersegurança e CIRT Angola" width="350" height="200">
                         </div>
-                        <h4>Cibersegurança & CIRT</h4>
-                        <p>Proteção avançada contra ameaças digitais, monitoramento contínuo e resposta a incidentes para garantir a segurança dos seus dados.</p>
-                        <a href="#" class="btn btn-primary">Saber Mais</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-code"></i>
+                        <div class="rounded-bottom p-4">
+                            <h3 class="h4 d-inline-block mb-4">Cibersegurança & CIRT</h3>
+                            <p class="mb-4">Protegemos a sua empresa contra ataques, invasões, ransomwares e perda de dados. Realizamos monitoramento contínuo, resposta a incidentes, auditorias, hardening e políticas de segurança para garantir a máxima proteção digital em Angola.</p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Saiba Mais</a>
                         </div>
-                        <h4>Desenvolvimento de Software</h4>
-                        <p>Soluções personalizadas de software empresarial, sistemas web e aplicações móveis desenvolvidas para as suas necessidades específicas.</p>
-                        <a href="#" class="btn btn-primary">Saber Mais</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-mobile-alt"></i>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="img/service-2.jpg" class="img-fluid rounded-top w-100" alt="Desenvolvimento Software Personalizado Angola" width="350" height="200">
                         </div>
-                        <h4>Aplicações Móveis</h4>
-                        <p>Desenvolvimento de aplicativos nativos e híbridos para iOS e Android, com foco em experiência do usuário e performance.</p>
-                        <a href="#" class="btn btn-primary">Saber Mais</a>
+                        <div class="rounded-bottom p-4">
+                            <h3 class="h4 d-inline-block mb-4">Desenvolvimento de Software Personalizado</h3>
+                            <p class="mb-4">Criamos software web, desktop e SaaS totalmente adaptado às necessidades da sua empresa em Angola. Sistemas robustos, escaláveis, seguros e prontos para uso corporativo.</p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="img/service-3.jpg" class="img-fluid rounded-top w-100" alt="Aplicativos Móveis Android iOS Angola" width="350" height="200">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <h3 class="h4 d-inline-block mb-4">Desenvolvimento de Aplicativos (Android & iOS)</h3>
+                            <p class="mb-4">Construímos apps modernos, rápidos e seguros para qualquer tipo de negócio em Angola. Aplicações híbridas ou nativas, com integração a sistemas, API e base de dados.</p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="img/service-4.jpg" class="img-fluid rounded-top w-100" alt="Sistema Gestão Faturação Angola" width="350" height="200">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <h3 class="h4 d-inline-block mb-4">Sistema de Gestão & Faturação</h3>
+                            <p class="mb-4">Solução completa de faturação e gestão empresarial: vendas, estoque, relatórios, finanças e controle total da operação. Simples de usar, seguro e 100% adaptável ao seu negócio em Angola.</p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="img/service-5.jpg" class="img-fluid rounded-top w-100" alt="Consultoria Tecnológica Angola" width="350" height="200">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <h3 class="h4 d-inline-block mb-4">Consultoria Tecnológica (IT Consulting)</h3>
+                            <p class="mb-4">Ajudamos empresas a modernizar infraestruturas, migrar para a nuvem, melhorar processos internos e implementar ferramentas que aumentam produtividade e reduzem custos em Angola.</p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="img/service-6.jpg" class="img-fluid rounded-top w-100" alt="Pentest Auditoria Segurança Angola" width="350" height="200">
+                        </div>
+                        <div class="rounded-bottom p-4">
+                            <h3 class="h4 d-inline-block mb-4">Pentest & Auditoria de Segurança</h3>
+                            <p class="mb-4">Identificamos vulnerabilidades em sistemas, redes, servidores e aplicativos antes que hackers o façam. Relatórios completos, recomendações técnicas e correção de falhas para empresas angolanas.</p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Saiba Mais</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    <!-- Services End -->
 
-    <!-- Solutions Section -->
-    <section id="solutions" class="section bg-light">
+    <!-- Features Section with ID -->
+    <div id="features" class="container-fluid feature pb-5">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Nossos Recursos e Soluções</h4>
+                <h1 class="display-5 mb-4">Tecnologia inteligente para proteger, educar e fortalecer a sua empresa</h1>
+                <p class="mb-0">Desenvolvemos soluções avançadas em cibersegurança e software que ajudam empresas e utilizadores a manterem-se seguros no ambiente digital. Os nossos produtos combinam segurança, automatização, educação digital e inteligência artificial, criando um ecossistema completo de proteção e produtividade.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-chart-line fa-4x text-primary"></i>
+                        </div>
+                        <h4>CyberGuardianPro</h4>
+                        <p class="mb-4">Sistema completo de proteção digital, integrado com monitoramento, análise de ameaças, firewall inteligente, alertas em tempo real e bloqueio automático de atividades suspeitas. Ideal para empresas que desejam segurança contínua e um painel de controlo unificado.</p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Comprar</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-university fa-4x text-primary"></i>
+                        </div>
+                        <h4>Phishing Frenzy – Jogo de Conscientização</h4>
+                        <p class="mb-4">Um jogo educativo criado para treinar funcionários e estudantes a identificar golpes online, links suspeitos, e técnicas de phishing usadas por hackers. Aprender segurança nunca foi tão divertido e eficaz.</p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Comprar</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-file-alt fa-4x text-primary"></i>
+                        </div>
+                        <h4>Cofre Digital – Password Fortress</h4>
+                        <p class="mb-4">Armazene e proteja senhas com criptografia de nível militar (AES-256). Organização automática, login rápido, cofres múltiplos e proteção anti-invasão. Perfeito para utilizadores e empresas que querem manter dados seguros.</p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Comprar</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-hand-holding-usd fa-4x text-primary"></i>
+                        </div>
+                        <h4>Email Scam Analyzer – Detector de Burlas em E-mail</h4>
+                        <p class="mb-4">Software inteligente que analisa o texto de e-mails e identifica probabilidades de fraude, phishing, spam e engenharia social. Inclui relatórios, alertas e recomendações sobre como proceder.</p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#contact">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+    <!-- Footer Section with ID -->
+    <div id="contact" class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5 border-start-0 border-end-0" style="border: 1px solid; border-color: rgb(255, 255, 255, 0.08);">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="footer-item">
+                        <a href="#home" class="p-0">
+                            <h4 class="text-white"><i class="fas fa-shield-alt me-2"></i>ArkPray</h4>
+                        </a>
+                        <p class="mb-4">Garantimos soluções completas de cibersegurança, software corporativo e treinamento para empresas de todos os tamanhos em Angola, protegendo seus dados, automatizando processos e capacitando sua equipe.</p>
+                    </div>
+                </div>
+                
+                <!-- Seção de Contato -->
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Contacto Info</h4>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                            <p class="text-white mb-0">Luanda - Angola</p>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-envelope text-primary me-3"></i>
+                            <p class="text-white mb-0">arkpraycps@gmail.com</p>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="fa fa-phone-alt text-primary me-3"></i>
+                            <p class="text-white mb-0">+244 932 088 879</p>
+                        </div>
+                        <div class="d-flex">
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://facebook.com/arkprayangola" aria-label="Facebook"><i class="fab fa-facebook-f text-white"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://twitter.com/arkprayangola" aria-label="Twitter"><i class="fab fa-twitter text-white"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://instagram.com/arkprayangola" aria-label="Instagram"><i class="fab fa-instagram text-white"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-0" href="https://linkedin.com/company/arkprayangola" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Nova Seção de Newsletter -->
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Receba Nossas Novidades</h4>
+                        <p class="mb-4">Inscreva-se para receber as últimas atualizações sobre cibersegurança, novos produtos e ofertas especiais.</p>
+                        <form class="newsletter-form">
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control bg-dark text-white border-primary" placeholder="Seu e-mail" aria-label="Seu e-mail" required>
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <div class="mt-3">
+                            <small class="text-muted">Respeitamos sua privacidade. Você pode cancelar a qualquer momento.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
         <div class="container">
-            <div class="section-title">
-                <span class="badge">Nossas Soluções</span>
-                <h2>Produtos Especializados</h2>
-                <p>Soluções tecnológicas inovadoras desenvolvidas para o mercado angolano</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-virus"></i>
-                    </div>
-                    <h4>CyberGuardian Pro</h4>
-                    <p>Sistema completo de proteção digital com monitoramento 24/7 e inteligência artificial</p>
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>ArkPray Angola</a>, Todos os direitos reservados.</span>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-vault"></i>
-                    </div>
-                    <h4>Secure Vault</h4>
-                    <p>Armazenamento seguro com criptografia militar para dados sensíveis da sua empresa</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-network"></i>
-                    </div>
-                    <h4>Business Intelligence</h4>
-                    <p>Plataforma de análise de dados e relatórios inteligentes para tomada de decisão</p>
+                <div class="col-md-6 text-center text-md-end text-body">
+                    <a href="/politica-privacidade" class="text-white me-3">Política de Privacidade</a>
+                    <a href="/termos-uso" class="text-white">Termos de Uso</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    <!-- Copyright End -->
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2 class="cta-title">Pronto para Transformar a sua Empresa?</h2>
-            <p class="cta-subtitle">Agende uma consultoria gratuita e descubra como podemos ajudar o seu negócio a crescer com segurança e tecnologia.</p>
-            <a href="#contact" class="btn btn-primary btn-lg">
-                <i class="fas fa-calendar me-2"></i>Agendar Consultoria
-            </a>
-        </div>
-    </section>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="footer-brand">ArkPray Angola</div>
-                    <p>Líder em soluções de cibersegurança e desenvolvimento tecnológico para empresas em Angola.</p>
-                    <div class="social-links mt-4">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4">
-                    <div class="footer-links">
-                        <h5>Empresa</h5>
-                        <a href="#about">Sobre Nós</a>
-                        <a href="#services">Serviços</a>
-                        <a href="#solutions">Soluções</a>
-                        <a href="#contact">Contacto</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 mb-4">
-                    <div class="footer-links">
-                        <h5>Contacto</h5>
-                        <a href="tel:+244932088879"><i class="fas fa-phone me-2"></i>+244 932 088 879</a>
-                        <a href="mailto:arkpraycps@gmail.com"><i class="fas fa-envelope me-2"></i>arkpraycps@gmail.com</a>
-                        <a href="#"><i class="fas fa-map-marker-alt me-2"></i>Luanda, Angola</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 mb-4">
-                    <div class="footer-links">
-                        <h5>Legal</h5>
-                        <a href="#">Política de Privacidade</a>
-                        <a href="#">Termos de Serviço</a>
-                        <a href="#">Cookies</a>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center pt-4 border-top border-secondary">
-                <p>&copy; 2024 ArkPray Angola. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('navbar-scrolled');
-            } else {
-                navbar.classList.remove('navbar-scrolled');
-            }
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
