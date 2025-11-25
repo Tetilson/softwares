@@ -1,1223 +1,242 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!doctype html>
+<html lang="pt-AO">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🚨 Como Hackers Encontram Você - O eBook que Pode Salvar Tua Empresa</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #000;
-        }
-        
-        .warning-banner {
-            background: linear-gradient(135deg, #ff0000, #cc0000);
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-weight: bold;
-            font-size: 18px;
-            animation: pulse 2s infinite;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(255,0,0,0.5);
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-            border-bottom: 5px solid #ff0000;
-        }
-        
-        .hero h1 {
-            font-size: 56px;
-            margin-bottom: 20px;
-            color: #ff0000;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
-            line-height: 1.2;
-        }
-        
-        .hero .subtitle {
-            font-size: 28px;
-            margin-bottom: 30px;
-            color: #ffd700;
-            font-weight: bold;
-        }
-        
-        .hero p {
-            font-size: 22px;
-            margin-bottom: 20px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .book-preview {
-            max-width: 400px;
-            margin: 40px auto;
-            box-shadow: 0 20px 60px rgba(255,0,0,0.4);
-            border-radius: 10px;
-            transform: perspective(1000px) rotateY(-5deg);
-            transition: all 0.3s;
-        }
-        
-        .book-preview:hover {
-            transform: perspective(1000px) rotateY(0deg) scale(1.05);
-        }
-        
-        .book-preview img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 60px 0;
-        }
-        
-        .stat-box {
-            background: rgba(255,255,255,0.1);
-            padding: 35px;
-            border-radius: 15px;
-            text-align: center;
-            border: 3px solid #ff0000;
-            transition: all 0.3s;
-        }
-        
-        .stat-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(255,0,0,0.4);
-        }
-        
-        .stat-number {
-            font-size: 56px;
-            color: #ff0000;
-            font-weight: bold;
-            display: block;
-            margin-bottom: 10px;
-        }
-        
-        .stat-label {
-            font-size: 18px;
-            color: #fff;
-        }
-        
-        .section {
-            background: white;
-            padding: 80px 20px;
-        }
-        
-        .section.dark {
-            background: #1a1a1a;
-            color: white;
-        }
-        
-        .section h2 {
-            font-size: 48px;
-            margin-bottom: 30px;
-            text-align: center;
-            color: #ff0000;
-        }
-        
-        .section.dark h2 {
-            color: #ffd700;
-        }
-        
-        .pain-points {
-            max-width: 800px;
-            margin: 40px auto;
-        }
-        
-        .pain-item {
-            background: #f9f9f9;
-            padding: 30px;
-            margin-bottom: 20px;
-            border-left: 5px solid #ff0000;
-            border-radius: 10px;
-            font-size: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .pain-item strong {
-            color: #ff0000;
-            font-size: 24px;
-        }
-        
-        .chapter-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 60px 0;
-        }
-        
-        .chapter-card {
-            background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
-            color: white;
-            padding: 40px;
-            border-radius: 20px;
-            border: 3px solid #ffd700;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .chapter-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,215,0,0.2), transparent);
-            transition: all 0.5s;
-        }
-        
-        .chapter-card:hover::before {
-            left: 100%;
-        }
-        
-        .chapter-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(255,215,0,0.3);
-        }
-        
-        .chapter-number {
-            font-size: 48px;
-            color: #ffd700;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        
-        .chapter-title {
-            font-size: 24px;
-            color: #fff;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-        
-        .chapter-description {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #ccc;
-        }
-        
-        .value-section {
-            background: linear-gradient(135deg, #ffd700, #ffed4e);
-            padding: 80px 20px;
-            text-align: center;
-        }
-        
-        .value-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin: 60px 0;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .value-card {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        
-        .value-icon {
-            font-size: 64px;
-            margin-bottom: 20px;
-        }
-        
-        .value-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ff0000;
-            margin-bottom: 15px;
-        }
-        
-        .value-text {
-            font-size: 16px;
-            color: #333;
-        }
-        
-        .price-section {
-            background: #1a1a1a;
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-        
-        .price-comparison {
-            max-width: 800px;
-            margin: 40px auto;
-            background: rgba(255,255,255,0.05);
-            padding: 40px;
-            border-radius: 20px;
-            border: 3px solid #ff0000;
-        }
-        
-        .comparison-item {
-            padding: 20px;
-            margin: 20px 0;
-            font-size: 24px;
-            border-bottom: 2px solid rgba(255,255,255,0.1);
-        }
-        
-        .comparison-item:last-child {
-            border-bottom: none;
-        }
-        
-        .strikethrough {
-            text-decoration: line-through;
-            opacity: 0.6;
-        }
-        
-        .price-highlight {
-            font-size: 72px;
-            color: #ffd700;
-            font-weight: bold;
-            margin: 40px 0;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
-            animation: priceGlow 2s infinite;
-        }
-        
-        @keyframes priceGlow {
-            0%, 100% { text-shadow: 3px 3px 6px rgba(255,215,0,0.5); }
-            50% { text-shadow: 3px 3px 20px rgba(255,215,0,0.8); }
-        }
-        
-        .bonus-section {
-            background: white;
-            padding: 80px 20px;
-        }
-        
-        .bonus-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 60px 0;
-        }
-        
-        .bonus-card {
-            background: linear-gradient(135deg, #ff0000, #cc0000);
-            color: white;
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(255,0,0,0.3);
-            transition: all 0.3s;
-        }
-        
-        .bonus-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(255,0,0,0.5);
-        }
-        
-        .bonus-icon {
-            font-size: 64px;
-            margin-bottom: 20px;
-        }
-        
-        .bonus-title {
-            font-size: 28px;
-            color: #ffd700;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-        
-        .bonus-description {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        
-        .bonus-value {
-            font-size: 24px;
-            margin-top: 20px;
-            color: #ffd700;
-            font-weight: bold;
-        }
-        
-        .cta-section {
-            background: linear-gradient(135deg, #ff0000, #cc0000);
-            padding: 100px 20px;
-            text-align: center;
-            color: white;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: #ffd700;
-            color: #000;
-            padding: 30px 70px;
-            font-size: 36px;
-            font-weight: bold;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            text-decoration: none;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-            transition: all 0.3s;
-            margin: 20px;
-            animation: buttonPulse 2s infinite;
-        }
-        
-        @keyframes buttonPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        
-        .cta-button:hover {
-            background: #ffed4e;
-            transform: scale(1.1) !important;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-        }
-        
-        .urgency-timer {
-            background: #000;
-            color: #ff0000;
-            padding: 40px;
-            text-align: center;
-            font-size: 32px;
-            font-weight: bold;
-            border: 3px solid #ff0000;
-            margin: 40px 0;
-        }
-        
-        .timer-display {
-            font-size: 64px;
-            color: #ffd700;
-            margin: 30px 0;
-            font-family: 'Courier New', monospace;
-        }
-        
-        .testimonials {
-            background: #1a1a1a;
-            padding: 80px 20px;
-            color: white;
-        }
-        
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin: 60px 0;
-        }
-        
-        .testimonial-card {
-            background: rgba(255,255,255,0.05);
-            padding: 40px;
-            border-radius: 20px;
-            border-left: 5px solid #ffd700;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 25px;
-            font-size: 18px;
-            line-height: 1.8;
-            color: #ccc;
-        }
-        
-        .testimonial-author {
-            font-weight: bold;
-            color: #ffd700;
-            font-size: 20px;
-        }
-        
-        .testimonial-role {
-            color: #999;
-            font-size: 16px;
-        }
-        
-        .guarantee-section {
-            background: linear-gradient(135deg, #006600, #008800);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-        
-        .guarantee-badge {
-            background: #ffd700;
-            color: #000;
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 40px auto;
-            font-size: 32px;
-            font-weight: bold;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-            border: 8px solid white;
-        }
-        
-        .guarantee-text {
-            font-size: 24px;
-            max-width: 800px;
-            margin: 30px auto;
-            line-height: 1.8;
-        }
-        
-        .faq-section {
-            background: white;
-            padding: 80px 20px;
-        }
-        
-        .faq-container {
-            max-width: 900px;
-            margin: 60px auto;
-        }
-        
-        .faq-item {
-            margin-bottom: 20px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .faq-question {
-            background: #2d2d2d;
-            color: white;
-            padding: 25px;
-            font-size: 22px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .faq-question:hover {
-            background: #3d3d3d;
-        }
-        
-        .faq-answer {
-            background: #f9f9f9;
-            padding: 25px;
-            display: none;
-            font-size: 18px;
-            line-height: 1.8;
-        }
-        
-        .faq-answer.active {
-            display: block;
-        }
-        
-        .contact-section {
-            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-        
-        .contact-box {
-            max-width: 600px;
-            margin: 40px auto;
-            background: rgba(255,215,0,0.1);
-            padding: 50px;
-            border-radius: 20px;
-            border: 3px solid #ffd700;
-        }
-        
-        .contact-item {
-            font-size: 24px;
-            margin: 25px 0;
-        }
-        
-        .contact-item a {
-            color: #ffd700;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-        
-        .contact-item a:hover {
-            color: #ffed4e;
-            text-shadow: 0 0 10px rgba(255,215,0,0.5);
-        }
-        
-        .final-cta {
-            background: #000;
-            color: #ff0000;
-            padding: 60px 20px;
-            text-align: center;
-            font-size: 32px;
-            font-weight: bold;
-        }
-        
-        .countdown-bar {
-            background: #000;
-            color: #ff0000;
-            padding: 15px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            z-index: 999;
-            font-weight: bold;
-            font-size: 18px;
-            box-shadow: 0 -4px 15px rgba(255,0,0,0.5);
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 36px;
-            }
-            
-            .hero .subtitle {
-                font-size: 20px;
-            }
-            
-            .cta-button {
-                font-size: 24px;
-                padding: 20px 40px;
-            }
-            
-            .price-highlight {
-                font-size: 48px;
-            }
-            
-            .stat-number {
-                font-size: 40px;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Como Hackers Te Encontram — Ebook 70+ páginas</title>
+  <meta name="description" content="70+ páginas: como hackers te encontram (Shodan, WhatsApp, Instagram), como proteger contas pessoais e empresas. Capítulo grátis. Compra por Kz 2.500." />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#071029;--accent:#ff6b00;--muted:#7b8b9a;--card:#0d1b2a;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:linear-gradient(180deg,#021027 0%, #081827 100%);color:#e6eef8;line-height:1.5}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:54px;height:54px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff9a3c);display:flex;align-items:center;justify-content:center;font-weight:800;color:#081827}
+    .brand h1{font-size:18px;margin:0}
+    .nav{display:flex;gap:12px;align-items:center}
+    .btn{background:var(--accent);color:#081827;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:28px 0}
+    .kicker{display:inline-block;background:var(--glass);padding:6px 10px;border-radius:10px;color:var(--accent);font-weight:700;margin-bottom:12px}
+    h2{font-size:32px;margin:0 0 12px 0}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .bullets{display:flex;flex-direction:column;gap:10px;margin:18px 0}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .price{font-size:20px;font-weight:800;color:#fff}
+    .cta-row{display:flex;gap:10px;margin-top:14px}
+    .secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 12px;border-radius:10px;color:var(--muted);text-decoration:none}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+    .feature{background:var(--card);padding:16px;border-radius:10px}
+    .section{margin-top:34px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    footer{margin-top:40px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+    .testimonials{display:flex;gap:12px}
+    .testimonial{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px}
+    .faq button{width:100%;text-align:left;padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:#e6eef8}
+    .countdown{font-weight:800;color:var(--accent)}
+    /* Mobile */
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.features{grid-template-columns:1fr}.two-col{grid-template-columns:1fr}.nav{display:none}.logo{width:46px;height:46px}}
+  </style>
 </head>
 <body>
-    <div class="warning-banner">
-        🚨 ALERTA: NESTE MOMENTO 36.000 HACKERS POR SEGUNDO ESTÃO VARRENDO A INTERNET 🚨
-    </div>
-
-    <div class="hero">
-        <div class="container">
-            <h1>📚 COMO HACKERS ENCONTRAM VOCÊ<br>E COMO SE PROTEGER<br>ANTES QUE SEJA TARDE</h1>
-            <p class="subtitle">O eBook Que 73% das Empresas Angolanas Precisam Ler URGENTEMENTE</p>
-            
-        
-    <div class="book-preview">
-    <div style="
-        background-image: url('img/1.png'); 
-        background-size: cover;
-        background-position: center;
-        padding: 60px 40px; 
-        text-align: center; 
-        color: white; 
-        border-radius: 10px;
-    ">
-        <div style="font-size: 48px; margin-bottom: 20px;"> . </div>
-        <h3 style="font-size: 32px; margin-bottom: 20px;">        .         </h3>
-        <p style="font-size: 18px;">                    .            </p>
-        <div style="margin-top: 40px; padding-top: 20px; border-top: 2px solid rgba(255,255,255,0.3);">
-            <p style="font-size: 16px;">   .   <br /> .  <br /> .<br /> . </p>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">H</div>
+        <div>
+          <h1>Como Hackers Te Encontram</h1>
+          <div style="font-size:12px;color:var(--muted)">70+ páginas • Soluções para pessoas & empresas</div>
         </div>
-    </div>
-</div>
+      </div>
+      <nav class="nav">
+        <a class="secondary" href="#conteudo">O que vais aprender</a>
+        <a class="secondary" href="#bônus">Bónus</a>
+        <a class="btn" href="#comprar">Comprar — Kz 2.500</a>
+      </nav>
+    </header>
 
-    </div>
-</div>
+    <main class="hero">
+      <div>
+        <div class="kicker">URGENTE PARA ANGOLA</div>
+        <h2>Não sejas mais uma estatística — Protege o teu WhatsApp, as tuas contas e a tua empresa</h2>
+        <p class="lead">73% das empresas angolanas foram alvo de ataques em 2024. Este guia prático de 70+ páginas explica, sem linguagem técnica, como hackers te encontram (do Shodan ao WhatsApp), os ataques mais comuns e as defesas que qualquer pessoa ou PME pode aplicar hoje.</p>
 
-            
-            <p style="font-size: 28px; color: #ffd700; margin-top: 40px; font-weight: bold;">
-                70+ PÁGINAS DE CONHECIMENTO QUE PODE SALVAR TUA EMPRESA
-            </p>
-            
-            <div class="stats-grid">
-                <div class="stat-box">
-                    <span class="stat-number">1,29 BI</span>
-                    <span class="stat-label">Ataques de Phishing Bloqueados em 12 Meses</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">73%</span>
-                    <span class="stat-label">Empresas Vítimas de Ransomware em 2024</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">60%</span>
-                    <span class="stat-label">PMEs Fecham em 6 Meses Após Ataque</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">Kz 6 MI</span>
-                    <span class="stat-label">Custo Médio de Recuperação</span>
-                </div>
+        <div class="bullets">
+          <div class="card">🔍 <strong>O que vais descobrir:</strong> Como hackers localizam-te online — mesmo sem seres técnico.</div>
+          <div class="card">🛡 <strong>O que vais aprender:</strong> Proteções imediatas para WhatsApp, Instagram, contas bancárias e servidores.</div>
+          <div class="card">⚡ <strong>Resultado:</strong> Reduz 90% do risco com passos práticos e testados.</div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn" id="btn-whatsapp" href="https://wa.me/244956031241?text=QUERO%20O%20EBOOK" target="_blank" rel="noopener">Enviar “QUERO” no WhatsApp</a>
+          <a class="secondary" href="#capitulo">Recebe capítulo grátis</a>
+        </div>
+
+        <div style="margin-top:14px;color:var(--muted)">Preço promocional de lançamento: <span class="price">Kz 2.500</span> • Garantia 7 dias</div>
+
+        <div class="features" style="margin-top:18px">
+          <div class="feature">📘 Ebook 70+ páginas</div>
+          <div class="feature">✅ Checklist de 10 passos</div>
+          <div class="feature">🎥 Vídeo tutorial: "Verifica se estás no Shodan"</div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin-top:0">Oferta especial</h3>
+          <p style="color:var(--muted)">Compra hoje e recebe 2 bónus imediatos. Oferta válida para os primeiros 200 compradores.</p>
+          <div style="margin-top:12px;display:flex;gap:8px;align-items:center;justify-content:space-between">
+            <div>
+              <div style="font-size:12px;color:var(--muted)">Preço</div>
+              <div class="price">Kz 2.500</div>
             </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <h2>😰 RECONHECES ALGUM DESTES MEDOS?</h2>
-            <div class="pain-points">
-                <div class="pain-item">
-                    <strong>❌</strong> Tens medo que tua empresa seja invadida mas não sabes COMO te proteger
-                </div>
-                <div class="pain-item">
-                    <strong>❌</strong> Ouves falar de ransomware, phishing, Shodan mas não entendes como funcionam
-                </div>
-                <div class="pain-item">
-                    <strong>❌</strong> Sabes que deverias investir em segurança mas não sabes POR ONDE COMEÇAR
-                </div>
-                <div class="pain-item">
-                    <strong>❌</strong> Tens senhas fracas, backups mal feitos, funcionários desinformados
-                </div>
-                <div class="pain-item">
-                    <strong>❌</strong> Confias apenas no antivírus e achas que está "protegido"
-                </div>
-                <div class="pain-item">
-                    <strong>❌</strong> Já foste vítima de tentativas de golpe e queres NUNCA MAIS passar por isso
-                </div>
+            <div>
+              <a class="btn" href="#comprar">Comprar agora</a>
             </div>
-            
-            <p style="text-align: center; font-size: 32px; color: #ff0000; font-weight: bold; margin-top: 60px;">
-                SE RESPONDESTE "SIM" A QUALQUER DESTES...<br>
-                ESTE EBOOK FOI ESCRITO PARA TI
-            </p>
+          </div>
+
+          <hr style="border:none;border-top:1px solid rgba(255,255,255,0.04);margin:12px 0" />
+
+          <div style="font-size:13px;color:var(--muted)">Formas de pagamento:</div>
+          <ul style="color:var(--muted);padding-left:18px;margin:6px 0 0">
+            <li>Multicaixa / Transferência</li>
+            <li>Unitel Money</li>
+            <li>MBWay / Cartão (via link)</li>
+          </ul>
+
+          <div style="margin-top:10px;font-size:13px;color:var(--muted)">Depois do pagamento envia o comprovante no WhatsApp e recebes o ebook imediatamente.</div>
         </div>
-    </div>
 
-    <div class="section dark">
-        <div class="container">
-            <h2>📖 O QUE VAS APRENDER NESTE EBOOK</h2>
-            <p style="text-align: center; font-size: 24px; margin-bottom: 60px;">
-                7 Capítulos Devastadores que Revelam TUDO sobre Como Hackers Operam
-            </p>
-            
-            <div class="chapter-grid">
-                <div class="chapter-card">
-                    <div class="chapter-number">01</div>
-                    <div class="chapter-title">A VERDADE SOBRE HACKERS</div>
-                    <div class="chapter-description">
-                        Como a indústria do cibercrime funciona REALMENTE. Os 3 tipos de hackers que te perseguem. Casos reais de empresas que perderam MILHÕES por falhas básicas.
-                    </div>
-                </div>
-                
-                <div class="chapter-card">
-                    <div class="chapter-number">02</div>
-                    <div class="chapter-title">O LADO OBSCURO DO SHODAN</div>
-                    <div class="chapter-description">
-                        O "Google dos Hackers" que expõe TUA câmera, TEU servidor, TEUS dispositivos. Como verificar se ESTÁS NO SHODAN neste momento. Casos CHOCANTES de exposição total.
-                    </div>
-                </div>
-                
-                <div class="chapter-card">
-                    <div class="chapter-number">03</div>
-                    <div class="chapter-title">FERRAMENTAS DOS HACKERS</div>
-                    <div class="chapter-description">
-                        Nmap, Maltego, TheHarvester, Metasploit, OSINT - como hackers usam ferramentas GRATUITAS para te invadir. Explicação passo a passo de ataques reais.
-                    </div>
-                </div>
-                
-                <div class="chapter-card">
-                    <div class="chapter-number">04</div>
-                    <div class="chapter-title">COMO EMPRESAS SÃO INVADIDAS</div>
-                    <div class="chapter-description">
-                        Os 7 erros fatais que abrem as portas. Porque empresas levam 207 DIAS para detetar invasões. Como atacantes se movem silenciosamente durante MESES.
-                    </div>
-                </div>
-                
-                <div class="chapter-card">
-                    <div class="chapter-number">05</div>
-                    <div class="chapter-title">ATAQUES CONTRA PESSOAS</div>
-                    <div class="chapter-description">
-                        Roubo de WhatsApp, golpes de links, QR Codes maliciosos, clonagem de cartões. Os 8 ataques mais comuns e como NUNCA MAIS cair neles.
-                    </div>
-                </div>
-                
-                <div class="chapter-card">
-                    <div class="chapter-number">06</div>
-                    <div class="chapter-title">PHISHING: O REI DOS ATAQUES</div>
-                    <div class="chapter-description">
-                        Por que 91% dos ataques começam com phishing. Os 7 tipos de phishing. Como IA tornou phishing IMPOSSÍVEL de distinguir. Defesas que FUNCIONAM.
-                    </div>
-                </div>
-                
-                <div class="chapter-card">
-                    <div class="chapter-number">07</div>
-                    <div class="chapter-title">O SISTEMA DE DEFESA PERFEITO</div>
-                    <div class="chapter-description">
-                        A solução completa de 4 pilares. Os softwares que transformam tua empresa de alvo fácil em FORTALEZA DIGITAL. Investimento que se paga 1000x.
-                    </div>
-                </div>
-            </div>
+        <div style="height:18px"></div>
+
+        <div class="card">
+          <h4 style="margin:0 0 8px 0">Prova social</h4>
+          <div class="testimonials">
+            <div class="testimonial">"Salvamos horas e evitamos um incidente grande" — Empresa X</div>
+            <div class="testimonial">"O capítulo grátis abriu os olhos" — Maria, empresária</div>
+          </div>
         </div>
-    </div>
+      </aside>
+    </main>
 
-    <div class="value-section">
-        <div class="container">
-            <h2 style="color: #000; font-size: 48px;">💎 O VALOR REAL DESTE EBOOK</h2>
-            <p style="font-size: 24px; color: #000; margin-bottom: 40px;">
-                Não É Apenas Informação. É Transformação TOTAL da Tua Segurança Digital
-            </p>
-            
-            <div class="value-grid">
-                <div class="value-card">
-                    <div class="value-icon">🎓</div>
-                    <div class="value-title">EDUCAÇÃO COMPLETA</div>
-                    <div class="value-text">
-                        Equivalente a um curso de segurança cibernética de 250.000 Kz. Mas em formato prático, direto, sem enrolação.
-                    </div>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">🛡️</div>
-                    <div class="value-title">PREVENÇÃO DE PERDAS</div>
-                    <div class="value-text">
-                        Evita prejuízos de 6 MILHÕES Kz (custo médio de recuperação de ransomware). ROI infinito.
-                    </div>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">⚡</div>
-                    <div class="value-title">AÇÃO IMEDIATA</div>
-                    <div class="value-text">
-                        Implementa proteções HOJE. Não precisas esperar cursos, consultorias caras, ou especialistas.
-                    </div>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">🧠</div>
-                    <div class="value-title">CONHECIMENTO PERMANENTE</div>
-                    <div class="value-text">
-                        Uma vez lido, o conhecimento é TEU para sempre. Proteges empresa, família, futuro.
-                    </div>
-                </div>
-            </div>
+    <section id="conteudo" class="section card">
+      <h3>O que vais aprender (Resumo)</h3>
+      <div class="two-col" style="margin-top:12px">
+        <div>
+          <h4>Para todos</h4>
+          <ul style="color:var(--muted)">
+            <li>Como evitar roubo de WhatsApp e golpes por link</li>
+            <li>Como proteger Instagram, Facebook e email</li>
+            <li>Checklist fácil para qualquer telemóvel</li>
+          </ul>
         </div>
-    </div>
-
-    <div class="urgency-timer">
-        <div class="container">
-            <p>⏰ OFERTA ESPECIAL EXPIRA EM:</p>
-            <div class="timer-display" id="countdown">23:47:33</div>
-            <p>DEPOIS VOLTA AO PREÇO NORMAL</p>
+        <div>
+          <h4>Para empresas</h4>
+          <ul style="color:var(--muted)">
+            <li>7 erros fatais que abrem portas para invasões</li>
+            <li>Como detectar intrusões (passo a passo)</li>
+            <li>Sistema de defesa em 4 pilares</li>
+          </ul>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <div class="price-section">
-        <div class="container">
-            <h2 style="font-size: 56px;">💰 QUANTO VALE TUA SEGURANÇA?</h2>
-            
-            <div class="price-comparison">
-                <div class="comparison-item" style="border-bottom: none; font-size: 32px; color: #ff0000; padding-top: 40px;">
-                    ❌ Recuperação após Ransomware: 6.000.000+ Kz
-                </div>
-            </div>
-            
-            <p style="font-size: 48px; margin: 60px 0 30px; color: #ffd700;">
-                🔥 HOJE, ESTE EBOOK COMPLETO:
-            </p>
-            
-            <div class="price-highlight">APENAS 4.900 KZ</div>
-            
-            <p style="font-size: 28px; color: #00ff00; margin: 30px 0;">
-                ✓ MENOS QUE UMA REFEIÇÃO EM RESTAURANTE<br>
-                ✓ MENOS QUE UM TANQUE DE COMBUSTÍVEL<br>
-                ✓ MAS PODE SALVAR MILHÕES DA TUA EMPRESA
-            </p>
-            
-            <p style="font-size: 20px; margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.8;">
-                Compara: Gastarias 15.000 Kz num almoço que esqueces no dia seguinte.<br>
-                Ou investes 4.900 Kz em conhecimento que PROTEGE tua empresa para sempre?
-            </p>
+    <section id="capitulo" class="section">
+      <h3>Recebe o Capítulo Grátis — O Lado Obscuro do Shodan</h3>
+      <div class="card">
+        <p style="color:var(--muted)">Entrega imediata. O capítulo de amostra mostra como encontrar se estás exposto e inclui um tutorial rápido para ver câmeras e serviços expostos.</p>
+        <div style="display:flex;gap:8px;margin-top:12px}">
+          <a class="btn" href="/capitulo_shodan_gratis.pdf" download>Descarregar o capítulo grátis</a>
+          <a class="secondary" href="https://wa.me/244956031241?text=CAP%C3%8DTULO%20GR%C3%81TIS" target="_blank">Enviar 'CAPÍTULO' no WhatsApp</a>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <div class="bonus-section">
-        <div class="container">
-            <h2>🎁 BÓNUS EXCLUSIVOS INCLUÍDOS GRÁTIS</h2>
-            <p style="text-align: center; font-size: 24px; margin-bottom: 60px;">
-                Compra Hoje e Recebe TUDO Isto Sem Custos Adicionais
-            </p>
-            
-            <div class="bonus-grid">
-                <div class="bonus-card">
-                    <div class="bonus-icon">📋</div>
-                    <div class="bonus-title">CHECKLIST DE SEGURANÇA</div>
-                    <div class="bonus-description">
-                        10 ações que podes implementar HOJE para aumentar tua segurança em 80%. Passo a passo prático.
-                    </div>
-                    <div class="bonus-value">Valor: 3.000 Kz</div>
-                </div>
-                
-                <div class="bonus-card">
-                    <div class="bonus-icon">🔍</div>
-                    <div class="bonus-title">GUIA: COMO VERIFICAR SE ESTÁS NO SHODAN</div>
-                    <div class="bonus-description">
-                        Tutorial completo para descobrir se teus dispositivos estão expostos publicamente e como corrigi-los.
-                    </div>
-                    <div class="bonus-value">Valor: 3.000 Kz</div>
-                </div>
-                
-                <div class="bonus-card">
-                    <div class="bonus-icon">📧</div>
-                    <div class="bonus-title">TEMPLATES DE EMAIL DE SEGURANÇA</div>
-                    <div class="bonus-description">
-                        Emails prontos para treinar tua equipa sobre phishing, senhas, e boas práticas. Copia e envia.
-                    </div>
-                    <div class="bonus-value">Valor: 2.000 Kz</div>
-                </div>
-                
-                <div class="bonus-card">
-                    <div class="bonus-icon">🆘</div>
-                    <div class="bonus-title">PLANO DE RESPOSTA A INCIDENTES</div>
-                    <div class="bonus-description">
-                        O que fazer se fores atacado. Passo a passo de contenção, recuperação e comunicação.
-                    </div>
-                    <div class="bonus-value">Valor: 5.000 Kz</div>
-                </div>
-                
-                <div class="bonus-card">
-                    <div class="bonus-icon">🔐</div>
-                    <div class="bonus-title">LISTA DE SENHAS SEGURAS</div>
-                    <div class="bonus-description">
-                        Gerador de padrões de senhas ultra-seguras. Nunca mais uses "123456" ou "empresa2025".
-                    </div>
-                    <div class="bonus-value">Valor: 2.000 Kz</div>
-                </div>
-                
-                <div class="bonus-card">
-                    <div class="bonus-icon">📞</div>
-                    <div class="bonus-title">SUPORTE POR EMAIL</div>
-                    <div class="bonus-description">
-                        Dúvidas após ler? Envia email. Respondemos em 24h com esclarecimentos adicionais.
-                    </div>
-                    <div class="bonus-value">Valor: 10.000 Kz</div>
-                </div>
-            </div>
-            
-            <p style="text-align: center; font-size: 36px; font-weight: bold; margin-top: 60px; color: #ff0000;">
-                TOTAL DE BÓNUS: 25.000 KZ<br>
-                <span style="color: #00cc00;">TUDO INCLUÍDO GRÁTIS!</span>
-            </p>
+    <section id="bônus" class="section card">
+      <h3>Bónus de Lançamento</h3>
+      <ul style="color:var(--muted)">
+        <li>Checklist de 10 passos (PDF)</li>
+        <li>Vídeo exclusivo: Como verificar se estás no Shodan</li>
+        <li>Template de instruções para funcionários</li>
+      </ul>
+    </section>
+
+    <section class="section card">
+      <h3>FAQ</h3>
+      <div class="faq">
+        <details style="margin-bottom:8px"><summary>Quanto custa?</summary><div style="padding:10px;color:var(--muted)">Kz 2.500 (promoção de lançamento). Garantia de reembolso em 7 dias.</div></details>
+        <details style="margin-bottom:8px"><summary>Como recebo o ebook?</summary><div style="padding:10px;color:var(--muted)">Após pagamento e envio do comprovante no WhatsApp, enviamos o PDF e acesso ao vídeo.</div></details>
+        <details style="margin-bottom:8px"><summary>Sou leigo — consigo entender?</summary><div style="padding:10px;color:var(--muted)">Sim. O conteúdo tem linguagem simples, checklists e passos práticos.</div></details>
+      </div>
+    </section>
+
+    <section id="comprar" class="section card">
+      <h3>Comprar o Ebook</h3>
+      <p style="color:var(--muted)">Preço promocional: <strong>Kz 2.500</strong></p>
+      <form id="purchaseForm">
+        <label style="display:block;margin-bottom:6px">Nome completo</label>
+        <input name="name" required style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#e6eef8;margin-bottom:8px" />
+        <label style="display:block;margin-bottom:6px">Telefone (ex: 956031241)</label>
+        <input name="phone" required style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#e6eef8;margin-bottom:8px" />
+        <label style="display:block;margin-bottom:6px">Método de pagamento</label>
+        <select name="method" style="width:100%;padding:10px;border-radius:8px;margin-bottom:10px;background:transparent;color:#e6eef8">
+          <option value="multicaixa">Multicaixa/Transferência</option>
+          <option value="unitel">Unitel Money</option>
+          <option value="cartao">Cartão / Link</option>
+        </select>
+        <div style="display:flex;gap:8px;align-items:center">
+          <button class="btn" type="submit">Enviar pedido</button>
+          <a class="secondary" href="https://wa.me/244956031241?text=QUERO%20COMPRAR%20O%20EBOOK" target="_blank">Enviar por WhatsApp</a>
         </div>
-    </div>
+        <div id="formMsg" style="margin-top:10px;color:var(--muted)"></div>
+      </form>
+    </section>
 
-    <div class="cta-section">
-        <div class="container">
-            <h2 style="font-size: 56px; margin-bottom: 30px;">🚀 SIM! QUERO PROTEGER MINHA EMPRESA AGORA!</h2>
-            <p style="font-size: 28px; margin-bottom: 50px;">
-                Clica no Botão e Recebe o eBook + Todos os Bónus INSTANTANEAMENTE
-            </p>
-            
-            <a href="https://wa.me/244932088645?text=Ol%C3%A1!%20Quero%20comprar%20o%20eBook%20%22Como%20Hackers%20Encontram%20Voc%C3%AA%22%20por%204.900%20Kz" class="cta-button">
-                📱 COMPRAR AGORA - 4.900 KZ
-            </a>
-            
-            <p style="font-size: 18px; margin-top: 40px;">
-                ✓ Pagamento Seguro via Transferência Bancária ou Multicaixa<br>
-                ✓ Recebe o eBook em PDF no teu Email em até 2 horas<br>
-                ✓ Compatível com Computador, Tablet, Smartphone<br>
-                ✓ Lê Offline, Imprime, Guarda para Sempre
-            </p>
-            
-            <p style="font-size: 24px; margin-top: 50px; color: #ffd700; font-weight: bold;">
-                ⏰ ATENÇÃO: APENAS 50 CÓPIAS A ESTE PREÇO!<br>
-                Após isso, volta para 24.900 Kz
-            </p>
-        </div>
-    </div>
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>© <strong>NetPrime</strong> — Segurança digital para Angola</div>
+        <div style="color:var(--muted)">Contacto: <a href="https://wa.me/244956031241" style="color:var(--accent);text-decoration:none">+244 956 031 241 (WhatsApp)</a></div>
+      </div>
+    </footer>
+  </div>
 
-    <div class="testimonials">
-        <div class="container">
-            <h2>💬 O QUE DIZEM QUEM JÁ LEU</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Li o eBook numa tarde. Fiquei CHOCADO com a quantidade de vulnerabilidades que tinha na minha empresa. Implementei as correções imediatamente. Duas semanas depois, o CyberGuardianPro bloqueou 47 tentativas de invasão. ESTE EBOOK SALVOU MINHA EMPRESA."
-                    </div>
-                    <div class="testimonial-author">Carlos M.</div>
-                    <div class="testimonial-role">Diretor de TI, Empresa de Logística</div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Sempre achei que segurança digital era complicado demais. Este eBook explicou TUDO de forma clara, direta, sem jargão técnico. Agora entendo exatamente como hackers operam e o que fazer para me proteger. Valeu cada kwanza."
-                    </div>
-                    <div class="testimonial-author">Ana P.</div>
-                    <div class="testimonial-role">Empresária, Setor Retalhista</div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "O capítulo sobre Shodan me deixou SEM DORMIR. Verifiquei minha empresa e descobri 3 câmeras IP expostas com senha padrão. QUALQUER UM podia ver o interior do escritório. Corrigi em 1 hora. 4.900 Kz evitaram um desastre."
-                    </div>
-                    <div class="testimonial-author">João S.</div>
-                    <div class="testimonial-role">CEO, Empresa de Contabilidade</div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Quase caí num golpe de phishing semana passada. Depois de ler o Capítulo 6, reconheço IMEDIATAMENTE emails maliciosos. Já ensinei minha equipa toda. Este eBook deveria ser OBRIGATÓRIO para todas as empresas."
-                    </div>
-                    <div class="testimonial-author">Marta L.</div>
-                    <div class="testimonial-role">CFO, Empresa de Construção</div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Não é exagero: este eBook vale 100x o preço. Gastei 4.900 Kz e economizei potencialmente milhões. As histórias reais de empresas que fecharam após ataques me fizeram agir IMEDIATAMENTE."
-                    </div>
-                    <div class="testimonial-author">Pedro C.</div>
-                    <div class="testimonial-role">Proprietário, Clínica Médica</div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Comprei por curiosidade. Acabei implementando TODO o sistema de 4 pilares descrito no Capítulo 7. Melhor decisão de negócio que tomei este ano. Minha empresa agora é uma FORTALEZA."
-                    </div>
-                    <div class="testimonial-author">Sandra R.</div>
-                    <div class="testimonial-role">Gestora, Empresa de Tecnologia</div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <script>
+    // Countdown for urgency (example: ends in 48 hours from first visit)
+    (function(){
+      const start = localStorage.getItem('promoStart') || Date.now();
+      localStorage.setItem('promoStart', start);
+      const expires = Number(start) + 48*3600*1000;
+      function fmt(ms){const h=Math.floor(ms/3600000);const m=Math.floor(ms%3600000/60000);return h+'h '+m+'m'}
+      const el = document.querySelector('.countdown');
+      if(!el){return}
+      setInterval(()=>{const now=Date.now();const left=expires-now;if(left<=0){el.textContent='Promoção encerrada';}else{el.textContent='Oferta termina em '+fmt(left)}},1000);
+    })();
 
-    <div class="guarantee-section">
-        <div class="container">
-            <h2 style="font-size: 56px;">✅ GARANTIA TOTAL DE 30 DIAS</h2>
-            
-            <div class="guarantee-badge">
-                <div>30 DIAS</div>
-                <div style="font-size: 20px; margin-top: 10px;">GARANTIA</div>
-                <div style="font-size: 20px;">100%</div>
-            </div>
-            
-            <div class="guarantee-text">
-                Compra o eBook. Lê com calma. Implementa as estratégias.<br><br>
-                
-                Se em 30 dias não sentires que:<br>
-                ✓ Entendes EXATAMENTE como hackers operam<br>
-                ✓ Sabes como te proteger eficazmente<br>
-                ✓ O conhecimento vale 100x os 4.900 Kz investidos<br><br>
-                
-                <strong style="font-size: 32px; color: #ffd700;">Devolvemos 100% do teu dinheiro.</strong><br>
-                Sem perguntas. Sem complicações. Sem ressentimentos.<br><br>
-                
-                Assumimos TODO o risco. Tu só tens a GANHAR.
-            </div>
-        </div>
-    </div>
+    // Simple form handler (client-side) — replace with server action if needed
+    document.getElementById('purchaseForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const f=new FormData(e.target);
+      const name=f.get('name');
+      const phone=f.get('phone');
+      const method=f.get('method');
+      const msg=document.getElementById('formMsg');
+      if(!name||!phone){msg.textContent='Preenche o nome e telefone.';return}
+      // Create prefilled WhatsApp message to complete purchase
+      const text = encodeURIComponent('Pedido de compra\nNome: '+name+'\nTelefone: '+phone+'\nMétodo: '+method+'\nSolicito instruções de pagamento.');
+      const wa = 'https://wa.me/244956031241?text='+text;
+      msg.innerHTML = 'Aguarda — vamos abrir o WhatsApp para finalizar. Se preferires podes enviar manualmente o comprovante.';
+      window.open(wa,'_blank');
+    });
 
-    <div class="faq-section">
-        <div class="container">
-            <h2>❓ PERGUNTAS FREQUENTES</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        ➕ O eBook é técnico demais? Vou entender?
-                    </div>
-                    <div class="faq-answer">
-                        NÃO! O eBook foi escrito para QUALQUER PESSOA entender. Sem jargão técnico. Explicações claras, diretas, com exemplos práticos. Se sabes usar WhatsApp, vais entender este eBook perfeitamente.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        ➕ Funciona para pequenas empresas ou só grandes?
-                    </div>
-                    <div class="faq-answer">
-                        Para TODAS! Desde freelancers até corporações. As ameaças não discriminam por tamanho. Hackers atacam ALVOS FÁCEIS, independente do porte. Este eBook protege qualquer tamanho de negócio.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        ➕ Como recebo o eBook após pagamento?
-                    </div>
-                    <div class="faq-answer">
-                        INSTANTANEAMENTE! Após confirmar pagamento via WhatsApp, enviamos o PDF diretamente para teu email em até 2 horas (geralmente em minutos). Podes ler imediatamente.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        ➕ Posso partilhar com minha equipa?
-                    </div>
-                    <div class="faq-answer">
-                        SIM! Uma vez comprado, podes usar internamente na tua empresa. Imprime, partilha, treina tua equipa. O conhecimento é teu.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        ➕ O eBook ensina a hackear?
-                    </div>
-                    <div class="faq-answer">
-                        NÃO! Ensina como DEFENDER. Mostra como hackers operam para que saibas te PROTEGER. É conhecimento de defesa, não ataque. 100% legal e ético.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        ➕ Vale a pena mesmo por 4.900 Kz?
-                    </div>
-                    <div class="faq-answer">
-                        ABSOLUTAMENTE! Um único ataque de ransomware custa 6 MILHÕES Kz para recuperar. Este eBook por 4.900 Kz pode evitar isso. O ROI é astronómico. É o investimento mais barato e mais valioso que farás.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        ➕ Há suporte se tiver dúvidas?
-                    </div>
-                    <div class="faq-answer">
-                        SIM! Suporte via email incluído gratuitamente. Enviamos resposta em até 24 horas com esclarecimentos adicionais.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        ➕ O preço vai aumentar mesmo?
-                    </div>
-                    <div class="faq-answer">
-                        SIM! Após as primeiras 50 cópias, o preço volta para 24.900 Kz. Esta é oferta de lançamento limitada. Garante o teu AGORA.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    // Smooth scroll for anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t) t.scrollIntoView({behavior:'smooth',block:'start'});});
+    });
+  </script>
 
-    <div class="contact-section">
-        <div class="container">
-            <h2>📞 CONTACTOS</h2>
-            <div class="contact-box">
-                <h3>Compra Agora e Recebe Imediatamente</h3>
-                <div class="contact-item">
-                    📱 WhatsApp: <a href="https://wa.me/244932088645">+244 932 088 645</a>
-                </div>
-                <div class="contact-item">
-                    📧 Email: <a href="mailto:arkpraycps@gmail.com">arkpraycps@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    🌐 Website: <a href="https://arkpray.vercel.app" target="_blank">arkpray.vercel.app</a>
-                </div>
-                
-                <p style="margin-top: 40px; font-size: 18px;">
-                    Resposta Garantida em Menos de 2 Horas<br>
-                    Suporte 7 Dias por Semana
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="final-cta">
-        <div class="container">
-            <p style="font-size: 42px; margin-bottom: 30px;">
-                ⚠️ ÚLTIMA OPORTUNIDADE ⚠️
-            </p>
-            <p style="font-size: 28px; margin-bottom: 40px; color: #ffd700;">
-                DECIDE AGORA: VÍTIMA OU PROTEGIDO?
-            </p>
-            <a href="https://wa.me/244932088645?text=Ol%C3%A1!%20Quero%20comprar%20o%20eBook%20%22Como%20Hackers%20Encontram%20Voc%C3%AA%22%20por%204.900%20Kz" class="cta-button">
-                🔥 COMPRAR AGORA - 4.900 KZ
-            </a>
-            <p style="font-size: 20px; margin-top: 40px; color: #fff;">
-                Cada Segundo sem Proteção é um Segundo de Risco<br>
-                Não Esperes ser Atacado para Agir
-            </p>
-        </div>
-    </div>
-
-    <div class="countdown-bar">
-        ⏰ OFERTA TERMINA EM: <span id="countdown-bottom">23:47:33</span> | 4.900 KZ → 24.900 KZ
-    </div>
-
-    <script>
-        // Countdown Timer
-        function startCountdown() {
-            let timeLeft = 23 * 3600 + 47 * 60 + 33; // 23:47:33 em segundos
-            
-            function updateTimer() {
-                const hours = Math.floor(timeLeft / 3600);
-                const minutes = Math.floor((timeLeft % 3600) / 60);
-                const seconds = timeLeft % 60;
-                
-                const display = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-                
-                document.getElementById('countdown').textContent = display;
-                document.getElementById('countdown-bottom').textContent = display;
-                
-                if (timeLeft > 0) {
-                    timeLeft--;
-                } else {
-                    timeLeft = 23 * 3600 + 47 * 60 + 33; // Restart
-                }
-            }
-            
-            updateTimer();
-            setInterval(updateTimer, 1000);
-        }
-        
-        // FAQ Toggle
-        function toggleFAQ(element) {
-            const answer = element.nextElementSibling;
-            const allAnswers = document.querySelectorAll('.faq-answer');
-            const allQuestions = document.querySelectorAll('.faq-question');
-            
-            // Close all others
-            allAnswers.forEach(a => {
-                if (a !== answer) a.classList.remove('active');
-            });
-            
-            allQuestions.forEach(q => {
-                if (q !== element) q.textContent = q.textContent.replace('➖', '➕');
-            });
-            
-            // Toggle current
-            answer.classList.toggle('active');
-            element.textContent = answer.classList.contains('active') 
-                ? element.textContent.replace('➕', '➖')
-                : element.textContent.replace('➖', '➕');
-        }
-        
-        // Start countdown when page loads
-        window.addEventListener('load', startCountdown);
-        
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
 </body>
-</html>    <span class="strikethrough">Consultoria de Segurança (1 dia): 200.000 Kz</span>
-                </div>
-                <div class="comparison-item">
-                    <span class="strikethrough">Curso Online de Cybersecurity: 150.000 Kz</span>
-                </div>
-                <div class="comparison-item">
-                    <span class="strikethrough">Auditoria de Vulnerabilidades: 300.000 Kz</span>
-                </div>
-                <div class="comparison-item">
-                    <span class="strikethrough">Resposta a Incidente de Segurança: 500.000+ Kz</span>
-                </div>
-                <div class="comparison-item">
+</html>
